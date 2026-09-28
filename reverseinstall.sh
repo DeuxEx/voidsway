@@ -12,6 +12,7 @@ mkdir -p /etc/xdg/wofi
 mkdir -p /etc/xdg/waybar
 mkdir -p /etc/xdg/foot
 mkdir -p /usr/share/backgrounds/sway
+mkdir -p /etc/waybar
 
 cp etc/sway/config /etc/sway/config
 cp etc/xdg/foot/foot.ini /etc/xdg/foot/foot.ini
@@ -21,3 +22,5 @@ cp etc/sway/status.sh /etc/sway/status.sh
 cp bg-pictures/* /usr/share/backgrounds/sway/
 cp etc/sddm.conf /etc/sddm.conf
 cp etc/sway/sddm-config /etc/sway/
+cp etc/waybar/config /etc/waybar/
+cp etc/waybar/style.css /etc/waybar/

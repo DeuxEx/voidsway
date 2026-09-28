@@ -263,14 +263,15 @@ bar {
 
     workspace_buttons yes
 
-    colors {
+    colors 
+	{
         statusline #ffffff
         background #323232
 
 	focused_workspace	#4c7899 #4c7899 #ffffff
 	inactive_workspace	#282a36 #282a36 #888888
 	urgent_workspace	#2f343a #900000 #ffffff
-    }
+	}
 }
 
 #include /etc/sway/config.d/*
@@ -282,3 +283,5 @@ for_window [app_id="vivaldi-stable"] fullscreen enable, inhibit_fullscreen deskt
 # Make the nmtui pop-up window float in the center
 for_window [title="Wi-Fi Menu"] floating enable, resize set 800 500, move position center
 
+
+exec_always waybar -c /etc/waybar/config -s /etc/waybar/style.css
