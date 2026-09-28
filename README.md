@@ -17,3 +17,5 @@ xbps-install xdg-user-dirs-gtk<br>
 xbps-install xf86-video-intel<br>
 xbps-install xorg-fonts<br>
 xbps-install xorg-minimal<br>
+xbps-install swaylock<br>
+xbps-install swayidle<br>
