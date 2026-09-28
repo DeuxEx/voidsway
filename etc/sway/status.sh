@@ -7,29 +7,24 @@ while true; do
     # 1. NetworkManager Wi-Fi Status
     wifi_ssid=$(nmcli -t -f active,ssid dev wifi | grep '^yes:' | cut -d: -f2)
     if [ -n "$wifi_ssid" ]; then
-        wifi_signal=$(nmcli -t -f active,bars dev wifi | grep '^yes:' | cut -d: -f2)
-        network=" 📶 $wifi_ssid ($wifi_signal)"
+        network="   $wifi_ssid"
     else
         eth_status=$(nmcli device status | grep '^ethernet' | awk '{print $3}')
         if [ "$eth_status" = "connected" ]; then
-            network=" 🔌 Wired"
+            network="   Wired"
         else
-            network=" ❌ Disconnected"
+            network="   Disconnected"
         fi
     fi
-    
 
-    # 2. PipeWire Volume Status (With error catching)
+    # 2. PipeWire Volume Status
     if ! vol_info=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ 2>/dev/null); then
-        # If wpctl fails to connect to pipewire, show a warning icon
         volume="   --"
     elif echo "$vol_info" | grep -q "MUTED"; then
         volume="   Muted"
     else
         vol_val=$(echo "$vol_info" | awk '{print $2}')
         vol_perc=$(echo "$vol_val * 100" | bc 2>/dev/null | cut -d. -f1)
-        
-        # Fallback if math fails
         if [ -z "$vol_perc" ]; then vol_perc="0"; fi
 
         if [ "$vol_perc" -eq 0 ]; then
@@ -40,18 +35,19 @@ while true; do
             volume="   $vol_perc%"
         fi
     fi
-    
 
     # 3. Battery Status
     if [ -d /sys/class/power_supply/BAT0 ]; then
         bat_perc=$(cat /sys/class/power_supply/BAT0/capacity)
         bat_status=$(cat /sys/class/power_supply/BAT0/status)
         if [ "$bat_status" = "Charging" ]; then
-            bat_icon="⚡"
+            bat_icon="  "
+        elif [ "$bat_perc" -le 15 ]; then
+            bat_icon="  "
         else
-            bat_icon="🔋"
+            bat_icon="  "
         fi
-        battery=" $bat_icon $bat_perc%"
+        battery="$bat_icon$bat_perc%"
     else
         battery=""
     fi
@@ -59,13 +55,16 @@ while true; do
     # 4. Brightness Status
     if command -v brightnessctl >/dev/null; then
         bright_perc=$(brightnessctl -m | cut -d, -f4 | tr -d '%')
-        brightness=" 💡 $bright_perc%"
+        brightness="   $bright_perc%"
     else
         brightness=""
     fi
 
-    # Output to swaybar (Items will appear from right to left in this order)
-    echo "$network |$volume |$battery |$brightness | 📅 $(date +'%Y-%m-%d %H:%M')"
+    # 5. Date and Time Status
+    datetime="   $(date +'%a %Y-%m-%d %H:%M')"
+
+    # Final output line
+    echo "$network |$volume |$battery |$brightness |$datetime "
     
     sleep 2
 done
