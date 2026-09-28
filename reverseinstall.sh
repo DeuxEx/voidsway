@@ -1,3 +1,8 @@
+xbps-install void-repo-multilib void-repo-multilib-nonfree void-repo-nonfree
+
+xbps-install Waybar font-awesome6 foot grimshot sway swayrbar wayland-utils wofi xdg-desktop-portal-gtk xdg-user-dirs-gtk xf86-video-intel xorg-fonts xorg-minimal swaylock swayidle
+
+
 mkdir -p /etc/sway
 mkdir -p /etc/xdg/wofi
 mkdir -p /etc/xdg/waybar
