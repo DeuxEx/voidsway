@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Give PipeWire and NetworkManager a second to fully initialize
+sleep 1
+
 while true; do
     # 1. NetworkManager Wi-Fi Status
     wifi_ssid=$(nmcli -t -f active,ssid dev wifi | grep '^yes:' | cut -d: -f2)
@@ -14,22 +17,30 @@ while true; do
             network=" ❌ Disconnected"
         fi
     fi
+    
 
-    # 2. PipeWire Volume Status
-    vol_info=$(wpctl get-volume @DEFAULT_AUDIO_SINK@)
-    if echo "$vol_info" | grep -q "MUTED"; then
-        volume=" 🔇 Muted"
+    # 2. PipeWire Volume Status (With error catching)
+    if ! vol_info=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ 2>/dev/null); then
+        # If wpctl fails to connect to pipewire, show a warning icon
+        volume="   --"
+    elif echo "$vol_info" | grep -q "MUTED"; then
+        volume="   Muted"
     else
         vol_val=$(echo "$vol_info" | awk '{print $2}')
-        vol_perc=$(echo "$vol_val * 100" | bc | cut -d. -f1)
+        vol_perc=$(echo "$vol_val * 100" | bc 2>/dev/null | cut -d. -f1)
+        
+        # Fallback if math fails
+        if [ -z "$vol_perc" ]; then vol_perc="0"; fi
+
         if [ "$vol_perc" -eq 0 ]; then
-            volume=" 🔈 $vol_perc%"
+            volume="   $vol_perc%"
         elif [ "$vol_perc" -lt 50 ]; then
-            volume=" 🔉 $vol_perc%"
+            volume="   $vol_perc%"
         else
-            volume=" 🔊 $vol_perc%"
+            volume="   $vol_perc%"
         fi
     fi
+    
 
     # 3. Battery Status
     if [ -d /sys/class/power_supply/BAT0 ]; then
