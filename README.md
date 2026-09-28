@@ -1,22 +1,19 @@
 Installation of sway on void linux:
 
-void-repo-multilib-6_4
-void-repo-multilib-nonfree-6_4
-void-repo-nonfree-9_6
+xbps-install void-repo-multilib<br>
+xbps-install void-repo-multilib-nonfree<br>
+xbps-install void-repo-nonfree<br>
 
-Waybar-0.15.0_4
-font-awesome6-6.7.1_1
-foot-1.28.0_1
-grimshot-1.11_1
-sway-1.12_1
-swayrbar-0.4.2_1
-vsv-2.0.0_1
-wayland-utils-1.3.0_1
-wireplumber-0.5.17_1
-wofi-1.5.3_1
-xdg-desktop-portal-gtk-1.15.3_1
-xdg-user-dirs-gtk-0.14_1
-xf86-video-intel-2.99.917.20210115_2
-xmirror-0.4.1_1
-xorg-fonts-7.6_5
-xorg-minimal-1.2_2
+xbps-install Waybar-0.15.0_4<br>
+xbps-install font-awesome6<br>
+xbps-install foot<br>
+xbps-install grimshot<br>
+xbps-install sway<br>
+xbps-install swayrbar<br>
+xbps-install wayland-utils<br>
+xbps-install wofi<br>
+xbps-install xdg-desktop-portal-gtk<br>
+xbps-install xdg-user-dirs-gtk<br>
+xbps-install xf86-video-intel<br>
+xbps-install xorg-fonts<br>
+xbps-install xorg-minimal<br>
