@@ -19,8 +19,5 @@
         "format-wifi": "WiFi: {essid}",
         "format-ethernet": "ETH: {ipaddr}",
         "format-disconnected": "Inget nätverk"
-    },
-    "pulseaudio": {
-        "format": "Vol: {volume}%"
     }
 }
