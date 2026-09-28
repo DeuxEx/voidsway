@@ -4,7 +4,7 @@ xbps-install void-repo-multilib<br>
 xbps-install void-repo-multilib-nonfree<br>
 xbps-install void-repo-nonfree<br>
 
-xbps-install Waybar-0.15.0_4<br>
+xbps-install Waybar<br>
 xbps-install font-awesome6<br>
 xbps-install foot<br>
 xbps-install grimshot<br>
