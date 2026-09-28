@@ -1,0 +1,500 @@
+   28  ip a
+   29  traceroute 192.168.1.172
+   30  GTK_THEME=Adwaita:light remmina
+   31  rustnet
+   32  rustnet --help
+   33  mc
+   34  clear
+   35  xbps-query -Rs backup
+   36  clear
+   37  xbps-query -Rs machine
+   38  clear
+   39  xbps-query -Rs nano
+   40  clear
+   41  xbps-query -Rs micro
+   42  du -h
+   43  clear
+   44  whoami
+   45  xbps-install -Suv
+   46  clear
+   47  xbps-remove --clean-cache --remove-orphans
+   48  vsv
+   49  bluetoothctl 
+   50  clear
+   51  vkpurge 
+   52  vkpurge  rm all
+   53  fastfetch 
+   54  reboot
+   55  ls
+   56  exit
+   57  ls -al
+   58  git clone https://github-com/deuxex/voidlinuxremina
+   59  git clone https://github.com/deuxex/voidlinuxremina
+   60  exit
+   61  rm -rf Remota_0.1.8*
+   62  ls -al
+   63  rm -rf launch-remota.sh 
+   64  ls -al
+   65  ls -al
+   66  cd ..
+   67  ls -al
+   68  rm -rf .gitconfig 
+   69  ls -al
+   70  cd voidlinuxremina/
+   71  ls
+   72  ls -al
+   73  ls -al .git/
+   74  tree
+   75  tree .git/
+   76  git push
+   77  git
+   78  git init
+   79  git init
+   80  git show
+   81  git add .
+   82  git commit -m "init"
+   83  git config --gloval user.enail "par@wennergrund.net"
+   84  git commit -m "init"
+   85  git config --global user.enail "par@wennergrund.net"
+   86  git commit -m "init"
+   87  git config --global user.enail "par@wennergrund.net"
+   88  git
+   89  git show
+   90  git commit -m "init"
+   91  git config --global user.name "Par Wennergrund"
+   92  git commit -m "init"
+   93  ls -al
+   94  tree .git/
+   95  cd ..
+   96  ls -al
+   97  git clone https://github.com/deuxex/voidlinuxremina
+   98  rm -rf voidlinuxremina/
+   99  git clone https://github.com/deuxex/voidlinuxremina
+  100  mkdir voidlinuxremina
+  101  ls
+  102  cd voidlinuxremina/
+  103  ls
+  104  git
+  105  git init
+  106  ls -al
+  107  git init --global init.defaultBranch
+  108  git config --global init.defaultBranch
+  109  git
+  110  git init
+  111  git add .
+  112  git commit -m "init"
+  113  git config --global user.name "Par Wennergrund"
+  114  git config --global user.enail "par@wennergrund.net"
+  115  git commit -m "init"
+  116  ls -al .git/
+  117  tree .git/
+  118  ls-al
+  119  cd ..
+  120  mc
+  121  cp .config/remmina/ voidlinuxremina/
+  122  sudo cp .config/remmina/ voidlinuxremina/
+  123  cp .config/remmina/* voidlinuxremina/
+  124  cp .config/remmina/ voidlinuxremina/
+  125  cp -rf .config/remmina/ voidlinuxremina/
+  126  cd voidlinuxremina/
+  127  ls -al
+  128  mc
+  129  mc
+  130  mkdir .config
+  131  ls
+  132  ls -al
+  133  mv remmina* .config/
+  134  mc
+  135  ls
+  136  ls -al
+  137  git add .
+  138  git commit -m "init"
+  139  git config --global user.enail "par@wennergrund.net"
+  140  git config --global user.name "Par Wennergrund"
+  141  git commit -m "init"
+  142  git config --global user.enail "par@wennergrund.net"
+  143  git remote set-url origin
+  144  git remote set-url origin git@github.com/deuxex/voidlinuxremina.git
+  145  git init
+  146  git remote set-url origin git@github.com/deuxex/voidlinuxremina.git
+  147  git push
+  148  git
+  149  git log
+  150  git remote set-url master git@github.com/deuxex/voidlinuxremina.git
+  151  git remote set-url origin git@github.com/deuxex/voidlinuxremina.git
+  152  get init
+  153  git init
+  154  git
+  155  ls -al
+  156  cd ..
+  157  rm -rf voidlinuxremina/
+  158  ls -al
+  159  mc
+  160  remmina
+  161  exit
+  162  exit
+  163  rustnet 
+  164  rustnet --help
+  165  rustnet --there gruvbox
+  166  rustnet --theme gruvbox
+  167  rustnet --theme tokyo-night
+  168  rustnet --theme vivid
+  169  rustnet --theme muted
+  170  exit
+  171  vsv
+  172  ip a
+  173  ping 8.8.8.8
+  174  clear
+  175  vsv
+  176  ip a
+  177  rm -rf /etc/runit/runsvdir/default/libvirtd
+  178  clear
+  179  vsv
+  180  ip a
+  181  reboot
+  182  clear
+  183  vsv
+  184  vsv
+  185  ip a
+  186  ping 8.8.8.8
+  187  clear
+  188  vsv
+  189  ip a
+  190  touch /etc/runit/runsvdir/default/dhcpcd/down
+  191  clear
+  192  vsv
+  193  vsv stop dhcpcd
+  194  clear
+  195  vsv
+  196  ip a
+  197  clear
+  198  ip a
+  199  reboot
+  200  clear
+  201  vsv
+  202  ip a
+  203  ping 8.8.8.8
+  204  ssh void@deux-void-asus-rog-gamingrig.local
+  205  ssh void@deux-void-office-hp640-g10.local
+  206  ssh deux@rustdesk-pelleman.ddns.net
+  207  ssh void@deux-void-hp830-g8-office-crypt.local
+  208  ping 192.168.1.176
+  209  ssh WG3700-SMEDJAN
+  210  ssh 192.168.1.152
+  211  telnet 192.168.1.152
+  212  vsv
+  213  xbps-install -Suv
+  214  xbps-remove --clean-cache --remove-orphans
+  215  clear
+  216  xbps-install -Suv
+  217  clear
+  218  vsv
+  219  xbps-install -Suv
+  220  clear
+  221  xbps-query -Rs monitor
+  222  xbps-install pst-1.3.2_4
+  223  pst
+  224  clear
+  225  xbps-query -Rs monitor
+  226  xbps-install ethstatus-0.4.9_1
+  227  ethstatus 
+  228  man ethstatus 
+  229  ethstatus 
+  230  clear
+  231  xbps-query -m
+  232  vsv
+  233  xbps-query -m
+  234  ls -al
+  235  history --help
+  236  xbps-query -m
+  237  nss-pp 
+  238  xbps-query -m
+  239  clear
+  240  xbps-query -m
+  241  xbps-remove gstreamer1*
+  242  xbps-remove gst-plugins-bad1-1.28.6_1
+  243  wayland-info 
+  244  wayland-scanner 
+  245  rustnet 
+  246  vsv
+  247  ssh deux@deux-void-mmgt-hp840g6.crypt.local
+  248  ssh deux@deux-void-mmgt-hp840g6-crypt.local
+  249  ssh deux@rustdesk-pelleman.ddns.net
+  250  clear
+  251  ssh void@deux-void-asus-rog-gamingrig.local
+  252  exit
+  253  exit
+  254  vsv
+  255  xbps-install -Suv
+  256  ssh void@deux-void-hp830-g8-office-crypt.local
+  257  ssh void@deux-void-office-hp640-g10.local
+  258  fastfetch 
+  259  clear
+  260  xbps-query -Rs ansi
+  261  clear
+  262  xbps-query -m
+  263  vsv
+  264  ip a
+  265  mc
+  266  exit
+  267  vsv
+  268  xbps-install -Suv
+  269  ssh void@deux-void-asus-rog-gamingrig.local
+  270  fastfetch 
+  271  mc
+  272  clear
+  273  ssh void@deux-void-office-hp640-g10.local
+  274  xbps-install -Suv
+  275  xbps-install -Suv
+  276  ssh void@deux-void-asus-rog-gamingrig.local
+  277  vsv
+  278  clear
+  279  vsv
+  280  xbps-install -Suv
+  281  ssh void@deux-void-asus-rog-gamingrig.local
+  282  vsv
+  283  xbps-install -Suv
+  284  cat /var/log/everything/current 
+  285  cat /var/log/kernel/current 
+  286  cat /var/log/sshd/current 
+  287  cat /var/log/telnet/current 
+  288  cat /var/log/sddm.log 
+  289  cat /var/log/telnet/current 
+  290  fastfetch 
+  291  ssh void@deux-void-asus-rog-gamingrig.local
+  292  ssh void@deux-void-office-hp640-g10.local
+  293  vsv
+  294  cat /var/log/telnet/current 
+  295  cat /var/log/sddm.log 
+  296  cat /var/log/
+  297  cat /var/log/kernel/current 
+  298  vsv
+  299  fastfetch 
+  300  exit
+  301  ls
+  302  ls -al
+  303  xbps-install foot sway
+  304  xbps-query -Rs sway
+  305  xbps-install Waybar-0.15.0_4 grimshot-1.11_1 swaybg-1.2.2_1 swayrbar-0.4.2_1
+  306  foot
+  307  exit
+  308  vsv restart sddm
+  309  clear
+  310  vsv
+  311  xbps-install wofi
+  312  loadkeys se-latin1
+  313  mc
+  314  swaymsg 
+  315  nano /etc/sway/config 
+  316  xbps-remove firejail
+  317  xbps-query -Rs
+  318  xbps-query -m
+  319  vsv
+  320  waybar 
+  321  man waybar 
+  322  nano /etc/xdg/user-dirs.conf 
+  323  nano /etc/xdg/foot/foot.ini 
+  324  nano /etc/sway/config 
+  325  nano /etc/sway/config 
+  326  swaybar 
+  327  swaybar --help
+  328  man swaybar 
+  329  swaybar --help
+  330  swaybar
+  331  nano /etc/sway/config 
+  332  nano /etc/sway/config 
+  333  nano /etc/sway/config 
+  334  nano /etc/sway/config 
+  335  clear
+  336  vsv
+  337  vsv
+  338  nano /etc/sway/config 
+  339  exit
+  340  vsv
+  341  wayland-info 
+  342  fastfetch 
+  343  exit
+  344  clear
+  345  vsv
+  346  exit
+  347  clear
+  348  vsv
+  349  exit
+  350  vsv
+  351  xbps-query -m
+  352  exit
+  353  vsv
+  354  vsv
+  355  vsv
+  356  exit
+  357  ls -al ~/
+  358  ls -al ~/.config/
+  359  ls -al ~/.config/s
+  360  ls -al ~/.config/
+  361  ls
+  362  nano /etc/sway/config 
+  363  nano /etc/sway/config 
+  364  nano /etc/sway/config 
+  365  ls -al /etc/xdg/
+  366  mkdir -p /etc/xdg/wofi
+  367  sudo nano /etc/xdg/wofi/config
+  368  sudo nano /etc/xdg/wofi/style.css
+  369  nano /etc/sway/config 
+  370  nano /etc/sway/config 
+  371  swaymsg -t get_inputs
+  372  nano /etc/sway/config 
+  373  xbps-install grimshot
+  374  nano /etc/sway/config 
+  375  nano /etc/xdg/foot/foot.ini 
+  376  foot
+  377  nano /etc/xdg/foot/foot.ini 
+  378  nano /etc/xdg/foot/foot.ini 
+  379  nano /etc/xdg/foot/foot.ini 
+  380  nano /etc/xdg/foot/foot.ini 
+  381  ls -al ~/.config/
+  382  nano /etc/xdg/foot/foot.ini 
+  383  nano /etc/xdg/user-dirs.conf 
+  384  nano /etc/sway/config 
+  385  swaybg
+  386  swaybar 
+  387  man swaybar 
+  388  swaybar --help
+  389  swaybg
+  390  swaybar 
+  391  nano /etc/sway/config 
+  392  man 5 sway-bar
+  393  nano /etc/sway/config 
+  394  xbps-install xorg-fonts dejavu-fonts-ttf noto-fonts-ttf
+  395  xbps-install xorg-fonts dejavu-fonts-ttf noto-fonts-ttf noto-fonts-emoji
+  396  clear
+  397  nano /etc/sway/config 
+  398  nano /etc/sway/config 
+  399  nano /etc/sway/config 
+  400  nano /etc/sway/config 
+  401  nano /etc/xdg/user-dirs.conf 
+  402  nano /etc/sway/config 
+  403  xbps-install swaybg
+  404  swaybg
+  405  man swaybg
+  406  mc
+  407  nano /etc/sway/config 
+  408  ls
+  409  pwd
+  410  ls -al Downloads/
+  411  nano /etc/sway/config 
+  412  chmod 644 /home/void/Downloads/
+  413  nano /etc/sway/config 
+  414  ls -al Downloads/
+  415  bg 
+  416  pwd
+  417  nano /etc/sway/config 
+  418  chmod 777 /home/void/Downloads/
+  419  ls -al
+  420  nano /etc/sway/config 
+  421  nano /etc/sway/config 
+  422  xbps-install -y font-awesome6-ttf
+  423  xbps-install -y font-awesome6
+  424  nano /etc/sway/config 
+  425  clear
+  426  swaymsg -t get_outputs
+  427  exit
+  428  exit
+  429  nano /etc/sway/config 
+  430  man 5 sway-bar
+  431  nano /etc/sway/config 
+  432  nano /etc/xdg/wofi/config 
+  433  nano /etc/xdg/wofi/style.css 
+  434  wl-paste 
+  435  kate /etc/xdg/wofi/style.css 
+  436  nano /etc/sway/config 
+  437  exit
+  438  exit
+  439  cd ..
+  440  ls -al
+  441  cd ..
+  442  ls -al
+  443  cd home/
+  444  ls -al
+  445  cd void/
+  446  ls -al
+  447  cp style.css /etc/xdg/wofi/style.css 
+  448  nano /etc/xdg/wofi/style.css 
+  449  vsv
+  450  l -al
+  451  ls -al
+  452  git 
+  453  ls -al
+  454  git clone https://github.com/deuxex/voidsway
+  455  ls -al
+  456  mkdir voidsway
+  457  ls -al
+  458  cd voidsway/
+  459  ls
+  460  ls -al
+  461  git remote set-url origin git@github.com:deuxex/voidsway.git
+  462  git config --global init.defaultBranch main
+  463  ls -al
+  464  git remote set-url origin git@github.com:deuxex/voidsway.git
+  465  git
+  466  git init
+  467  ls -al
+  468  git remote set-url origin git@github.com:deuxex/voidsway.git
+  469  git config --global init.defaultBranch main
+  470  ls -al
+  471  ls -al .git/
+  472  git remote set-url origin git@github.com:deuxex/voidsway.git
+  473  git add .
+  474  git commit -m "init setup"
+  475  git config --global user.email "par@wennergrund.net"
+  476  git commit -m "init setup"
+  477  git push
+  478  git push --set-upstream main master
+  479  ls -al
+  480  cd ..
+  481  cp /etc/sway/config voidsway/
+  482  cd voidsway/
+  483  ls -al
+  484  git commit -m "init setup"
+  485  git add .
+  486  git commit -m "init setup"
+  487  git push
+  488  git push --set-upstream main master
+  489  git remote set-url origin git@github.com:deuxex/voidsway.git
+  490  git remote set-url main git@github.com:deuxex/voidsway.git
+  491  git push git@github.com:deuxex/voidsway.git
+  492  git push --set-upstream git@github.com:deuxex/voidsway.git main
+  493  git push
+  494  git add .
+  495  git commit -m "test"
+  496  git push --set-upstream git@github.com:deuxex/voidsway.git main
+  497  ssh-keygen 
+  498  cat /root/.ssh/id_ed25519.pub 
+  499  history 
+  500  exit
+  501  cat /root/.ssh/id_ed25519.pub 
+  502  git push --set-upstream git@github.com:deuxex/voidsway.git main
+  503  ls
+  504  rm config 
+  505  ls
+  506  mkdir etc
+  507  ls
+  508  mkdir etc/sway
+  509  cp /etc/sway/config etc/sway/
+  510  ls
+  511  ls -al
+  512  tree
+  513  mkdir etc/xdg
+  514  mkdir etc/xdg/wofi
+  515  mkdir etc/xdg/foot
+  516  mkdir etc/xdg/waybar
+  517  cp /etc/xdg/foot/foot.ini /etc/xdg/foot/
+  518  cp /etc/xdg/foot/foot.ini etc/xdg/foot/
+  519  cp /etc/xdg/wofi/* etc/xdg/wofi/
+  520  cp /etc/xdg/waybar/* etc/xdg/waybar/
+  521  git add .
+  522  git commit -m "init"
+  523  git push
+  524  ls -al
+  525  xbps-query -m >> xbps-query.txt
+  526  ls -al
+  527  history >> history.txt
