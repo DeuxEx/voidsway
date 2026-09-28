@@ -242,11 +242,14 @@ bar {
 
 	status_command /etc/sway/status.sh
 
-    # When the status_command prints a new line to stdout, swaybar updates.
+    font pango:DejaVu Sans Mono, Font Awesome 6 Free 11
+
+    # Add this line to enable click interactions
+    on_click exec /etc/sway/status.sh click
 
     # The default just shows the current date and time.
 
-    status_command while date +'%a %Y-%m-%d %H:%M'; do sleep 60; done
+    # status_command while date +'%a %Y-%m-%d %H:%M'; do sleep 60; done
 
     workspace_buttons yes
 
