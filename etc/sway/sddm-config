@@ -1,0 +1,12 @@
+# Standard inputs configured for Sweden
+input * {
+	xkb_layout "se"
+}
+
+output * bg #323232 solid_color
+
+#exec "sddm-greater --wayland"
+
+#Force the greeter to run using Wayland Layer-shell protocols
+#exec env QT_QPA_PLATFORM="wayland;xcb" sddm-greeter --wayland
+exec sddm-greeter --wayland
