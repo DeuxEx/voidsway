@@ -1,5 +1,13 @@
 #!/bin/sh
 
+# Handle bar clicks
+if [ "$1" = "click" ]; then
+    # Launches NetworkManager's visual menu in a floating terminal window
+    swaymsg "exec foot --title='Wi-Fi Menu' nmtui"
+    exit 0
+fi
+
+
 # Give PipeWire and NetworkManager a second to fully initialize
 sleep 1
 
