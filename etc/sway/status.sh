@@ -17,26 +17,26 @@ while true; do
         fi
     fi
 
-    # 2. PipeWire Volume Status (Utan bc)
-    if ! vol_raw=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ 2>/dev/null); then
-        volume="   --"
-    elif echo "$vol_raw" | grep -q "MUTED"; then
-        volume="   Muted"
-    else
-        # Omvandla t.ex. "Volume: 0.45" till "45%" med ren shell-matematik
-        vol_num=$(echo "$vol_raw" | sed 's/[^0-9.]//g')
-        # Multiplicera med 100 via shell
-        vol_perc=$(awk -v v="$vol_num" 'BEGIN {printf "%.0f", v * 100}')
-        [ -z "$vol_perc" ] && vol_perc="0"
-
-        if [ "$vol_perc" -eq 0 ]; then
-            volume="   0%"
-        elif [ "$vol_perc" -lt 50 ]; then
-            volume="   $vol_perc%"
-        else
-            volume="   $vol_perc%"
-        fi
-    fi
+#    # 2. PipeWire Volume Status (Utan bc)
+#    if ! vol_raw=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ 2>/dev/null); then
+#        volume="   --"
+#    elif echo "$vol_raw" | grep -q "MUTED"; then
+#        volume="   Muted"
+#    else
+#        # Omvandla t.ex. "Volume: 0.45" till "45%" med ren shell-matematik
+#        vol_num=$(echo "$vol_raw" | sed 's/[^0-9.]//g')
+#        # Multiplicera med 100 via shell
+#        vol_perc=$(awk -v v="$vol_num" 'BEGIN {printf "%.0f", v * 100}')
+#        [ -z "$vol_perc" ] && vol_perc="0"
+#
+#        if [ "$vol_perc" -eq 0 ]; then
+#            volume="   0%"
+#        elif [ "$vol_perc" -lt 50 ]; then
+#            volume="   $vol_perc%"
+#        else
+#            volume="   $vol_perc%"
+#        fi
+#    fi
 
     # 3. Battery Status (Direkt från /sys utan externa kommandon)
     battery=""
@@ -70,7 +70,8 @@ while true; do
     datetime="   $(date +'%a %Y-%m-%d %H:%M')"
 
     # Utskrift till swaybar
-    echo "$network |$volume $battery$brightness|$datetime "
+    #echo "$network |$volume $battery$brightness|$datetime "
+    echo "$network $battery$brightness|$datetime "
 
     # 2 sekunders pausslinga
     sleep 2
