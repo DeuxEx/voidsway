@@ -288,4 +288,7 @@ for_window [app_id="vivaldi-stable"] fullscreen enable, inhibit_fullscreen deskt
 for_window [title="Wi-Fi Menu"] floating enable, resize set 800 500, move position center
 
 
-exec_always waybar -c /etc/waybar/config -s /etc/waybar/style.css
+exec_always killall waybar; waybar -c /etc/waybar/config -s /etc/waybar/style.css
+
+
+
