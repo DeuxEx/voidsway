@@ -4,7 +4,7 @@
     "height": 30,
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["sway/window"],
-    "modules-right": ["pulseaudio", "network", "cpu", "memory", "clock"],
+    "modules-right": ["network", "cpu", "memory", "clock"],
 
     "clock": {
         "format": "{:%Y-%m-%d %H:%M}"
