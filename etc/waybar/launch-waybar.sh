@@ -4,6 +4,8 @@
 #Om du vill ha en renare Sway-konfiguration kan du skapa ett litet skript 
 #(t.ex. ~/.config/sway/scripts/launch-waybar.sh):
 
+#Gör skriptet körbart med chmod +x skriptnamn.sh och anropa det sedan i din Sway-konfiguration:
+#exec_always ~/.config/sway/scripts/launch-waybar.sh
 
 # Stäng av eventuellt körande waybar-processer
 killall -q waybar
