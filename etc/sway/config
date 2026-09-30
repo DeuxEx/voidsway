@@ -280,9 +280,9 @@ bar {
 
 #include /etc/sway/config.d/*
 
-for_window [class=".*"] fullscreen enable
+#for_window [class=".*"] fullscreen enable
 #for_window [app_id=".*"] fullscreen enable
-for_window [app_id="vivaldi-stable"] fullscreen enable, inhibit_fullscreen desktop
+#for_window [app_id="vivaldi-stable"] fullscreen enable, inhibit_fullscreen desktop
 
 # Make the nmtui pop-up window float in the center
 for_window [title="Wi-Fi Menu"] floating enable, resize set 800 500, move position center

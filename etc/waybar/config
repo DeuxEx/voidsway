@@ -2,9 +2,10 @@
     "layer": "top",
     "position": "bottom",
     "height": 30,
+
     // HÄR: "custom/mypipe" har lagts till först i listan till höger
-    "modules-left": ["sway/workspaces", "sway/mode", "custom/mypipe"],
-    "modules-center": ["sway/window"],
+    "modules-left": ["sway/workspaces", "sway/mode", "wlr/taskbar", "sway/window"],
+    "modules-center": ["custom/mypipe"],
     "modules-right": ["network", "cpu", "memory", "clock"],
 
     "clock": {
@@ -17,7 +18,7 @@
         "format": "RAM: {}%"
     },
     "network": {
-        "format-wifi": "WiFi: {essid}",
+        "format-wifi": "Wifi: {essid}",
         "format-ethernet": "ETH: {ipaddr}",
         "format-disconnected": "Inget nätverk"
     },
@@ -25,5 +26,10 @@
         "format": "{}",
         "exec": "mkdir -p /tmp/waybar && [ ! -p /tmp/waybar/pipe ] && mkfifo /tmp/waybar/pipe; cat /tmp/waybar/pipe",
         "restart-interval": 1
+    },
+    "wlr/taskbar": {
+	"format": "{icon}",
+	"icon-size": 24,
+	"on-click": "activate"
     }
 }
