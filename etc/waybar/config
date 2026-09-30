@@ -4,7 +4,8 @@
     "height": 30,
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["sway/window"],
-    "modules-right": ["network", "cpu", "memory", "clock"],
+    // HÄR: "custom/mypipe" har lagts till först i listan till höger
+    "modules-right": ["custom/mypipe", "network", "cpu", "memory", "clock"],
 
     "clock": {
         "format": "{:%Y-%m-%d %H:%M}"
@@ -19,5 +20,10 @@
         "format-wifi": "WiFi: {essid}",
         "format-ethernet": "ETH: {ipaddr}",
         "format-disconnected": "Inget nätverk"
+    },
+    "custom/mypipe": {
+        "format": "{}",
+        "exec": "mkdir -p /tmp/waybar && [ ! -p /tmp/waybar/pipe ] && mkfifo /tmp/waybar/pipe; cat /tmp/waybar/pipe",
+        "restart-interval": 1
     }
 }
