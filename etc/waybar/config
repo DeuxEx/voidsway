@@ -2,10 +2,10 @@
     "layer": "top",
     "position": "bottom",
     "height": 30,
-    "modules-left": ["sway/workspaces", "sway/mode"],
-    "modules-center": ["sway/window"],
     // HÄR: "custom/mypipe" har lagts till först i listan till höger
-    "modules-right": ["custom/mypipe", "network", "cpu", "memory", "clock"],
+    "modules-left": ["sway/workspaces", "sway/mode", "custom/mypipe"],
+    "modules-center": ["sway/window"],
+    "modules-right": ["network", "cpu", "memory", "clock"],
 
     "clock": {
         "format": "{:%Y-%m-%d %H:%M}"
