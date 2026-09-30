@@ -21,5 +21,5 @@ xbps-install swaylock<br>
 xbps-install swayidle<br>
 
 
-waybar pipen kan sen anropas såhär:
-echo "Det funkar!" > /tmp/waybar/pipe
+waybar pipen kan sen anropas såhär:<br>
+echo "Det funkar!" > /tmp/waybar/pipe<br>
