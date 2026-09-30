@@ -19,3 +19,7 @@ xbps-install xorg-fonts<br>
 xbps-install xorg-minimal<br>
 xbps-install swaylock<br>
 xbps-install swayidle<br>
+
+
+waybar pipen kan sen anropas såhär:
+echo "Det funkar!" > /tmp/waybar/pipe
