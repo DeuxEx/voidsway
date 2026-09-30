@@ -1,0 +1,61 @@
+
+{
+    // Placera programikoner och klocka i mitten, tomma sidor eller systemikoner till höger
+    "modules-left": ["custom/launcher"],
+    "modules-center": ["wlr/taskbar"],
+    "modules-right": ["pulseaudio", "network", "clock", "tray"],
+    
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 24,
+        "on-click": "activate"
+    }
+}
+
+
+
+2. Klickbara knappar och interaktion
+Alla moduler i Waybar (både inbyggda och egna) kan göras klickbara. 
+Du styr vad som händer med följande parametrar i din config:
+• on-click: Vänsterklick
+• on-click-right: Högerklick
+• on-scroll-up / on-scroll-down: Skrolla med mushjulet (perfekt för volym eller ljusstyrka)
+
+  Exempel på en klickbar startmeny-knapp (Windows-stil):
+  json
+  "custom/launcher": {
+      "format": "", // En Windows- eller Linuxikon (kräver Font Awesome)
+      "on-click": "wofi --show drun" // Öppnar en programmeny när du klickar
+  }
+  
+
+
+
+3. Textfält som tar emot en pipe (Dynamisk text)
+För att strömma text till Waybar i realtid använder du modulen "custom". 
+Du kan inte "pipa" direkt in i Waybar-processen utifrån, men du kan få Waybar att lyssna på en pipe (t.ex. en FIFO-named pipe) eller köra ett skript kontinuerligt.
+Det bästa sättet att göra detta på är att använda en FIFO-pipe.
+  
+  Steg 1: Skapa en FIFO-pipe i systemet
+  Kör detta i din terminal (eller lägg i din start-up):
+  bash
+  mkfifo /tmp/waybar_pipe
+    
+  
+  Steg 2: Konfigurera Waybar att lyssna på pipen
+  Lägg till en anpassad modul i din Waybar-config:
+  json
+  "custom/mypipe": {
+      "format": "{}",
+      "exec": "cat /tmp/waybar_pipe",
+      "restart-interval": 1
+  }
+
+(Om du vill ha omedelbar uppdatering utan fördröjning kan du köra ett skript i exec som loopar eller håller strömmen öppen).
+
+Steg 3: Pipa text från vad som helst
+Nu kan du skicka text till din Waybar från vilket skript eller terminalkommando som helst:
+bash
+echo "Hej från terminalen!" > /tmp/waybar_pipe
+Använd koden med försiktighet.
+Texten på panelen kommer då att ändras till det du skickade.
