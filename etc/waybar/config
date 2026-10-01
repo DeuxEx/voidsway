@@ -6,10 +6,10 @@
     // HÄR: "custom/mypipe" har lagts till först i listan till höger
     "modules-left": ["sway/workspaces", "sway/mode", "wlr/taskbar", "sway/window"],
     "modules-center": ["custom/mypipe", "keyboard-state", "sway/language"],
-    "modules-right": ["network", "cpu", "memory", "tray", "custom/snip", "clock"],
+    "modules-right": ["custom/screenshot", "network", "cpu", "memory", "tray", "clock"],
 
     "clock": {
-		"timezone": "Europe/Stockholm",
+	"timezone": "Europe/Stockholm",
         "format": "{:%Y-%m-%d %H:%M}"
     },
     "cpu": {
@@ -19,9 +19,9 @@
         "format": "RAM: {}%"
     },
     "keyboard-state": {
-		"numlock": true,
-		"capslock": true,
-		"format": " {name} {icon}",
+	"numlock": true,
+	"capslock": true,
+	"format": " {name} {icon}",
         "format-icons": {
             "locked": "",
             "unlocked": ""
@@ -48,12 +48,19 @@
         "format": "",
         "on-click": "grimshot --notify save area $HOME/Pictures/$(zenity --entry --text 'Set filename:' --entry-text '.png')"
     },
-    
-    "custom/power":{
-        "format": " ",
-        "on-click": "nwg-bar",
-        "on-click-right": "killall nwg-bar"
-    },
+
+    "custom/screenshot": {
+        "format": "📷",
+        "tooltip": true,
+        "menu": "on-click",
+        "menu-file": "/etc/waybar/screenshot_menu.xml", // Sökväg till din menyfil
+        "menu-actions": {
+            "shot_area": "grimshot --notify savecopy area",     // Välj region/område manuellt
+            "shot_screen": "grimshot --notify savecopy screen", // Hela skärmen
+            "shot_window": "grimshot --notify savecopy window"  // Ett specifikt fönster
+    	 }
+   },
+
     "wlr/taskbar": {
 	"format": "{icon}",
 	"icon-size": 24,

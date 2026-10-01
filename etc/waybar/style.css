@@ -47,31 +47,6 @@ window#waybar {
     color: #11111b;
 }
 
-/* Specifika färgmarkeringar för modulerna */
-#cpu {
-    color: #89dceb;
-}
-
-#memory {
-    color: #a6e3a1;
-}
-
-#network {
-    color: #f9e2af;
-}
-
-#network.disconnected {
-    color: #f38ba8;
-}
-
-#pulseaudio {
-    color: #fab387;
-}
-
-#clock {
-    color: #cba6f7;
-    font-weight: bold;
-}
 
 /* Fönstertitel i mitten */
 #window {

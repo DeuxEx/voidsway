@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <object class="GtkMenu" id="menu">
+    <child>
+      <object class="GtkMenuItem" id="shot_area">
+        <property name="label">Ta skärmklipp (Region)</property>
+        <property name="visible">True</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkMenuItem" id="shot_screen">
+        <property name="label">Hela skärmen</property>
+        <property name="visible">True</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkMenuItem" id="shot_window">
+        <property name="label">Aktivt fönster</property>
+        <property name="visible">True</property>
+      </object>
+    </child>
+  </object>
+</interface>
