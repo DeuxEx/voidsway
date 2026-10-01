@@ -19,6 +19,7 @@ xbps-install xorg-fonts<br>
 xbps-install xorg-minimal<br>
 xbps-install swaylock<br>
 xbps-install swayidle<br>
+xbps-install zenity<br>
 
 
 waybar pipen kan sen anropas såhär:<br>
