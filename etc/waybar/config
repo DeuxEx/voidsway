@@ -5,10 +5,11 @@
 
     // HÄR: "custom/mypipe" har lagts till först i listan till höger
     "modules-left": ["sway/workspaces", "sway/mode", "wlr/taskbar", "sway/window"],
-    "modules-center": ["custom/mypipe"],
-    "modules-right": ["network", "cpu", "memory", "clock"],
+    "modules-center": ["custom/mypipe", "keyboard-state", "sway/language"],
+    "modules-right": ["network", "cpu", "memory", "tray", "custom/snip", "clock"],
 
     "clock": {
+		"timezone": "Europe/Stockholm",
         "format": "{:%Y-%m-%d %H:%M}"
     },
     "cpu": {
@@ -16,6 +17,22 @@
     },
     "memory": {
         "format": "RAM: {}%"
+    },
+    "keyboard-state": {
+		"numlock": true,
+		"capslock": true,
+		"format": " {name} {icon}",
+        "format-icons": {
+            "locked": "",
+            "unlocked": ""
+        }
+    },
+    "sway/language": {
+	    "format": " {}",
+    },
+    "tray": {
+	"icon-size": 20,
+	"spacing": 10
     },
     "network": {
         "format-wifi": "Wifi: {essid}",
@@ -27,9 +44,20 @@
         "exec": "mkdir -p /tmp/waybar && [ ! -p /tmp/waybar/pipe ] && mkfifo /tmp/waybar/pipe; cat /tmp/waybar/pipe",
         "restart-interval": 1
     },
+    "custom/snip":{
+        "format": "",
+        "on-click": "grimshot --notify save area $HOME/Pictures/$(zenity --entry --text 'Set filename:' --entry-text '.png')"
+    },
+    
+    "custom/power":{
+        "format": " ",
+        "on-click": "nwg-bar",
+        "on-click-right": "killall nwg-bar"
+    },
     "wlr/taskbar": {
 	"format": "{icon}",
 	"icon-size": 24,
-	"on-click": "activate"
+	"on-click": "activate",
+	"tooltip-format": "{title}"
     }
 }
