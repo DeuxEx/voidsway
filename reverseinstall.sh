@@ -2,7 +2,7 @@
 xbps-install void-repo-multilib void-repo-multilib-nonfree void-repo-nonfree
 
 #my requirements
-xbps-install grimshot wofi xdg-desktop-portal-gtk xdg-user-dirs-gtk xf86-video-intel xorg-fonts xorg-minimal 
+xbps-install grimshot wofi xdg-desktop-portal-gtk xdg-user-dirs-gtk xf86-video-intel xorg-fonts xorg-minimal zenity
 
 #reguirements
 xbps-install Waybar font-awesome6 foot sway swayrbar wayland-utils swaylock swayidle
