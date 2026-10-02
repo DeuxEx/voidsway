@@ -5,19 +5,25 @@
 
     // HÄR: "custom/mypipe" har lagts till först i listan till höger
     "modules-left": ["sway/workspaces", "sway/mode", "wlr/taskbar", "sway/window"],
-    "modules-center": ["custom/mypipe", "keyboard-state", "sway/language"],
+    "modules-center": ["custom/mypipe"],
     "modules-right": ["custom/screenshot", "network", "cpu", "memory", "tray", "clock"],
 
     "clock": {
 	"timezone": "Europe/Stockholm",
-        "format": "{:%Y-%m-%d %H:%M}"
+	"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+	"format-alt": "{:%Y-%m-%d}",
+    "format": "{:%Y-%m-%d %H:%M}"
     },
+
     "cpu": {
-        "format": "CPU: {usage}%"
+        "format": "{usage}% ",
+        "tooltip": true
     },
+
     "memory": {
-        "format": "RAM: {}%"
+        "format": "{}% "
     },
+
     "keyboard-state": {
 	"numlock": true,
 	"capslock": true,
@@ -27,18 +33,34 @@
             "unlocked": ""
         }
     },
+
     "sway/language": {
-	    "format": " {}",
+	"format": " {}",
     },
+
     "tray": {
 	"icon-size": 20,
 	"spacing": 10
     },
+
     "network": {
         "format-wifi": "Wifi: {essid}",
         "format-ethernet": "ETH: {ipaddr}",
         "format-disconnected": "Inget nätverk"
     },
+
+     "backlight": {
+        // "device": "acpi_video1",
+        "format": "{icon}",
+        "format-icons": ["", ""],
+        "on-click": "bash $HOME/.config/system_scripts/brightness up",
+        "on-click-right": "bash $HOME/.config/system_scripts/brightness down",
+        "on-scroll-up": "",
+        "on-scroll-down": ""
+    },
+ 
+ 
+ 
     "custom/mypipe": {
         "format": "{}",
         "exec": "mkdir -p /tmp/waybar && [ ! -p /tmp/waybar/pipe ] && mkfifo /tmp/waybar/pipe; cat /tmp/waybar/pipe",
