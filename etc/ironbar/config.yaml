@@ -32,7 +32,7 @@ end:
   - type: script
     mode: poll
     interval: 0
-    cmd: "echo "
+    cmd: "echo   "
     on_click_left: "wlogout" # Kräver att wlogout är installerat, eller byt ut mot valfritt kommando
 
   - type: clock

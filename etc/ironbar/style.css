@@ -1,4 +1,3 @@
-/* Placering: ~/.config/ironbar/style.css eller /etc/ironbar/style.css */
 
 /* Globala inställningar */
 * {
@@ -14,12 +13,13 @@ label, button {
     padding-bottom: 0px;
     margin-top: 0px;
     margin-bottom: 0px;
-    min-height: 0px; /* Tvingar GTK att tillåta en lägre höjd */
+    min-height: 0px;
+    /* Tvingar GTK att tillåta en lägre höjd */
 }
 
 /* Hela barens bakgrund */
 #bar {
-    background-color: rgba(30, 30, 46, 0.9); /* Mörklila/grå med lite transparens */
+    background-color: rgba(30, 30, 46, 0.9);
     color: #cdd6f4;
     border: 1px solid #45475a;
     border-radius: 1px;
@@ -49,7 +49,7 @@ label, button {
 
 .workspaces button.focused {
     color: #11111b;
-    background-color: #cba6f7; /* Lila för aktiv arbetsyta */
+    background-color: #cba6f7;
 }
 
 .workspaces button:hover {
