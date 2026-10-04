@@ -77,9 +77,9 @@
         "menu": "on-click",
         "menu-file": "/etc/waybar/screenshot_menu.xml", // Sökväg till din menyfil
         "menu-actions": {
-            "shot_area": "grimshot --notify savecopy area $HOME/Pictures/$(zenity --entry --text 'Set filename:' --entry-text '.png')",     // Välj region/område manuellt
-            "shot_screen": "grimshot --notify savecopy screen $HOME/Pictures/$(zenity --entry --text 'Set filename:' --entry-text '.png')", // Hela skärmen
-            "shot_window": "grimshot --notify savecopy window $HOME/Pictures/$(zenity --entry --text 'Set filename:' --entry-text '.png')"  // Ett specifikt fönster
+        "shot_area": "grimshot --notify savecopy area $HOME/Pictures/$(zenity --entry --text 'Set filename:' --entry-text '.png')",     // Välj region/område manuellt
+        "shot_screen": "grimshot --notify savecopy screen $HOME/Pictures/$(zenity --entry --text 'Set filename:' --entry-text '.png')", // Hela skärmen
+        "shot_window": "grimshot --notify savecopy window $HOME/Pictures/$(zenity --entry --text 'Set filename:' --entry-text '.png')"  // Ett specifikt fönster
     	 }
    },
 
