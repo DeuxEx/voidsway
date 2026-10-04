@@ -1,0 +1,39 @@
+# Placering: ~/.config/ironbar/config.yaml eller /etc/ironbar/config.yaml
+
+position: bottom
+height: 42
+margin:
+  top: 0
+  bottom: 0
+  left: 1
+  right: 1
+
+start:
+  - type: workspaces
+    all_monitors: true
+    sort: index
+
+center:
+
+
+end:
+  - type: sys_info
+    format:
+      - " {cpu_percent}%"
+      - " {memory_percent}%"
+    interval:
+      cpu: 2
+      memory: 5
+
+  - type: volume
+    format: "{icon} {volume}%"
+    max_volume: 100
+
+  - type: script
+    mode: poll
+    interval: 0
+    cmd: "echo "
+    on_click_left: "wlogout" # Kräver att wlogout är installerat, eller byt ut mot valfritt kommando
+
+  - type: clock
+    format: " %H:%M   %d %b"

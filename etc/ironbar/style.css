@@ -1,0 +1,85 @@
+/* Placering: ~/.config/ironbar/style.css eller /etc/ironbar/style.css */
+
+/* Globala inställningar */
+* {
+    font-family: "JetBrains Mono NFM", "Noto Sans", sans-serif;
+    font-size: 25px;
+    font-weight: bold
+    min-height: 0px;
+}
+
+/* Nollställ inbyggd padding på ALLA underliggande GTK-etiketter och knappar */
+label, button {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    min-height: 0px; /* Tvingar GTK att tillåta en lägre höjd */
+}
+
+/* Hela barens bakgrund */
+#bar {
+    background-color: rgba(30, 30, 46, 0.9); /* Mörklila/grå med lite transparens */
+    color: #cdd6f4;
+    border: 1px solid #45475a;
+    border-radius: 1px;
+    padding: 2px 8px;
+}
+
+/* Gemensam stil för alla moduler/widgets */
+.widget {
+    margin: 2px 4px;
+    padding: 2px 4px;
+    min-height: 0px;
+    background-color: #313244;
+    border-radius: 1px;
+}
+
+/* Specifik stil för arbetsytor (workspaces) */
+.workspaces button {
+    color: #6c7086;
+    padding: 0 8px;
+    border-radius: 4px;
+}
+
+.workspaces button.visible {
+    color: #f5c2e7;
+    min-height: 0px;
+}
+
+.workspaces button.focused {
+    color: #11111b;
+    background-color: #cba6f7; /* Lila för aktiv arbetsyta */
+}
+
+.workspaces button:hover {
+    background-color: #45475a;
+}
+
+/* Specifik stil för klockan i mitten */
+.clock {
+    background-color: #89b4fa;
+    color: #11111b;
+}
+
+/* Systeminfo (CPU/RAM) */
+.sys-info {
+    color: #a6e3a1;
+}
+
+/* Volymknappen */
+.volume {
+    color: #f9e2af;
+}
+
+/* Strömknappen */
+.script {
+	font-size: 40px;
+    color: #f38ba8;
+    padding: 4px 4px;
+}
+
+.script:hover {
+    background-color: #f38ba8;
+    color: #11111b;
+}

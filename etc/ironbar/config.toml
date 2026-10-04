@@ -1,0 +1,6 @@
+position = "bottom"
+height = 40
+
+[[start]]
+type = "workspaces"
+# ... rest of your config

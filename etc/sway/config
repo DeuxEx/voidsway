@@ -282,7 +282,5 @@ bar {
 for_window [title="Wi-Fi Menu"] floating enable, resize set 800 500, move position center
 
 
-exec_always killall waybar; waybar -c /etc/waybar/config -s /etc/waybar/style.css
 
-
-
+exec_always killall -9 -q ironbar; sleep 0.2 && exec ironbar --config /etc/ironbar/config.yaml
