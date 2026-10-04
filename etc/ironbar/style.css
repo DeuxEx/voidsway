@@ -7,8 +7,14 @@
     min-height: 0px;
 }
 
+
+
+
+
+
+
 /* Nollställ inbyggd padding på ALLA underliggande GTK-etiketter och knappar */
-label, button {
+label, button, image {
     padding-top: 0px;
     padding-bottom: 0px;
     margin-top: 0px;
@@ -76,7 +82,8 @@ label, button {
 .script {
 	font-size: 40px;
     color: #f38ba8;
-    padding: 4px 4px;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
 .script:hover {
