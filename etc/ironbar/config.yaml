@@ -8,15 +8,95 @@ margin:
   left: 1
   right: 1
 
+
 start:
+  - type: menu
+    start:
+      - type: custom
+        label: Terminal
+        on_click: xterm
+    height: 440
+    width: 200
+    icon: linux
+    label: null
+
+    
   - type: workspaces
     all_monitors: true
     sort: index
 
 center:
-
+  - type: focused
+    show_icon: true
+    show_title: true
+    icon_size: 32
+    truncate: end
 
 end:
+  - type: battery
+    format: "{percentage}%"
+    profiles:
+      warning:
+        percent: 20
+      critical:
+        when:
+          percent: 5
+          charging: false
+        format: "[LOW] {percentage}%"
+
+
+
+  - type: brightness
+    format: "{percentage}%"
+    smooth_scroll_speed: 0.5
+    mode:
+      type: systemd
+      subsystem: backlight
+      name: amdgpu_bl1
+    profiles:
+      low:
+        when: 25
+        format: "{percentage}%"
+        icon_label: 
+      high:
+        when: 100
+        format: "{percentage}%"
+        icon_label: 
+
+
+
+  - type: bluetooth
+    icon_size: 32
+    format:
+      not_found: ""
+      disabled:  Off
+      enabled:  On
+      connected:  {device_alias}
+      connected_battery:  {device_alias} • {device_battery_percent}%
+    popup:
+      max_height:
+        devices: 5
+      header:  Enable Bluetooth
+      disabled: "{adapter_status}"
+      device:
+        header: "{device_alias}"
+        header_battery: "{device_alias}"
+        footer: "{device_status}"
+        footer_battery: "{device_status} • Battery {device_battery_percent}%"
+    adapter_status:
+      not_found: No Bluetooth adapters found
+      enabled: Bluetooth enabled
+      enabling: Enabling Bluetooth...
+      disabled: Bluetooth disabled
+      disabling: Disabling Bluetooth...
+    device_status:
+      connected: Connected
+      connecting: Connecting...
+      disconnected: Disconnect
+      disconnecting: Disconnecting...
+
+
+
   - type: sys_info
     format:
       - " {cpu_percent}%"
@@ -25,16 +105,29 @@ end:
       cpu: 2
       memory: 5
 
+
   - type: volume
     format: "{icon} {volume}%"
     max_volume: 100
+
 
   - type: script
     mode: poll
     interval: 0
     cmd: "echo   "
     on_click_left: "wlogout" 
-    # Kräver att wlogout är installerat, eller byt ut mot valfritt kommando
+
+
+  - type: clipboard
+    max_items: 3
+    truncate:
+      mode: end
+      length: 50
+
+
 
   - type: clock
-    format: " %H:%M   %d %b"
+    format: "%d/%m/%Y %H:%M"
+	#format_popup: "%H:%M:%S"
+
+
