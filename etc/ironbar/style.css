@@ -21,6 +21,7 @@
     --size-md: 16px;
 }
 
+
 * {
     font-family: sans-serif;
     font-size: var(--size-md);
@@ -28,6 +29,16 @@
     border: none;
     box-shadow: none;
 }
+
+
+#min_delare {
+    background: transparent; /* Gör den helt osynlig */
+    border: none;
+    margin: 0;
+    padding: 0;
+    min-width: 1000px; /* Ändra detta pixelvärde för att öka/minska sektionen */
+}
+
 
 popover, popover contents {
     border-radius: 12px;

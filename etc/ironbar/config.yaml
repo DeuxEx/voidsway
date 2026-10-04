@@ -30,6 +30,14 @@ center:
     icon_size: 32
     truncate: end
 
+  # Den här skapar ditt tomma utrymme och fungerar som en delare
+  - type: script
+    name: min_delare
+    mode: poll
+    interval: 0
+    cmd: "echo ''"
+    
+
 end:
   - type: battery
     format: "{percentage}%"
