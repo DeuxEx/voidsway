@@ -1,5 +1,5 @@
-# Placering: ~/.config/ironbar/config.yaml eller /etc/ironbar/config.yaml
 
+popup_autohide: true  # <--- LÄGG TILL DENNA RAD så försvinner menyn om du klickar bredvid
 position: bottom
 height: 30
 margin:
@@ -17,7 +17,6 @@ start:
     #    on_click: xterm
     icon: applications-development
     label:  󱓞
-    #label_icon: applications-development
     app_icon_size: 16
 
     

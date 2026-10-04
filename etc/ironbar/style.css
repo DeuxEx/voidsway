@@ -32,10 +32,16 @@
 popover, popover contents {
     border-radius: 12px;
     padding: 0;
+    flex-direction: column;
+    justify-content: flex-start !important; /* Tvingar upp till toppen */
+
 }
 
 window, popover {
     background-color: var(--color-dark-secondary);
+    flex-direction: column;
+    justify-content: flex-start !important; /* Tvingar upp till toppen */
+
 }
 
 box, button, label, calendar {
@@ -81,8 +87,9 @@ radio {
     margin-left: var(--margin-sm);
 }
 
-.popup {
+.popover, .popup {
     padding: var(--margin-lg);
+    vertical-align: start !important;
 }
 
 /* --- clock --- */
@@ -144,19 +151,27 @@ radio {
 
 .menu label {
     padding: 0 var(--margin-sm);
+    valign: start;         /* GTK-specifik vertikal justering till toppen */
+    vertical-align: start;
 }
 
 .popup-menu .sub-menu {
     border-left: 1px solid var(--color-border-light);
     padding-left: var(--margin-sm);
+    vertical-align: start;
+    valign: start;         /* GTK-specifik vertikal justering till toppen */
 }
 
 .popup-menu .category, .popup-menu .application {
     padding: var(--margin-xs);
+    valign: start;         /* GTK-specifik vertikal justering till toppen */
+    vertical-align: start;
 }
 
 .popup-menu .category.open {
     background-color: var(--color-dark-secondary);
+    valign: start;         /* GTK-specifik vertikal justering till toppen */
+    vertical-align: start;
 }
 
 /* --- music --- */
@@ -234,20 +249,28 @@ radio {
 .popup-power-menu #header {
     font-size: var(--size-lg);
     margin-bottom: 0.6em;
+    vertical-align: start; /* Tvingar innehållet att börja uppifrån */
+    valign: start;         /* GTK-specifik vertikal justering till toppen */
 }
 
 .popup-power-menu .power-btn {
     border: 1px solid var(--color-border-dark);
     border-radius: 10px;
     padding: 0 1.2em;
+    vertical-align: start; /* Tvingar innehållet att börja uppifrån */
+    valign: start;         /* GTK-specifik vertikal justering till toppen */
 }
 
 .popup-power-menu .power-btn label {
     font-size: var(--size-xxl);
+    vertical-align: start; /* Tvingar innehållet att börja uppifrån */
+    valign: start;         /* GTK-specifik vertikal justering till toppen */
 }
 
 /* need to use funky selector
 due to widgets being wrapped in GtkRevealers */
 .popup-power-menu #buttons > * + * {
     margin-left: 1.3em;
+    vertical-align: start; /* Tvingar innehållet att börja uppifrån */
+    valign: start;         /* GTK-specifik vertikal justering till toppen */
 }
