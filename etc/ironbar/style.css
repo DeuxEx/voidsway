@@ -95,7 +95,7 @@ radio {
 /* --- clock --- */
 
 .clock {
-    font-weight: bold;
+    #font-weight: bold;
 }
 
 .popup-clock .calendar-clock {

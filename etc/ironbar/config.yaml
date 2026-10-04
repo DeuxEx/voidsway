@@ -13,8 +13,6 @@ start:
   - type: menu
     start:
       - type: custom
-    #    label: Terminal
-    #    on_click: xterm
     icon: applications-development
     label:  󱓞
     app_icon_size: 16
@@ -23,6 +21,7 @@ start:
   - type: workspaces
     all_monitors: true
     sort: index
+
 
 center:
   - type: focused
@@ -98,8 +97,8 @@ end:
 
   - type: sys_info
     format:
-      - " {cpu_percent}%"
-      - " {memory_percent}%"
+      - "  {cpu_percent}%"
+      - "  {memory_percent}%"
     interval:
       cpu: 2
       memory: 5
