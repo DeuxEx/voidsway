@@ -29,6 +29,8 @@ center:
     show_title: true
     icon_size: 32
     truncate: end
+    name: descfield
+
 
   # Den här skapar ditt tomma utrymme och fungerar som en delare
   - type: script

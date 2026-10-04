@@ -36,7 +36,13 @@
     border: none;
     margin: 0;
     padding: 0;
-    min-width: 1000px; /* Ändra detta pixelvärde för att öka/minska sektionen */
+    min-width: 500px; /* Ändra detta pixelvärde för att öka/minska sektionen */
+}
+
+
+#descfield {
+	min-width: 700px;
+	#background: #112233;
 }
 
 
@@ -107,6 +113,8 @@ radio {
 
 .clock {
     #font-weight: bold;
+    background-color: #aa0000;
+    border-radius: 10px;
 }
 
 .popup-clock .calendar-clock {
