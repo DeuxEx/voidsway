@@ -28,8 +28,6 @@ set $menu wofi --show drun
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-#output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-#output * bg /usr/share/backgrounds/sway/retro_linux.png fill
 output * bg /usr/share/backgrounds/sway/Gemini_Generated_Image_6vsro96vsro96vsr.jpeg fill
 
 
@@ -244,7 +242,7 @@ bindsym $mod+r mode "resize"
 bar {
     position top
 
-    status_command /etc/sway/status.sh
+    #status_command /etc/sway/status.sh
 
     font pango:DejaVu Sans Mono, Font Awesome 6 Free 11
 
