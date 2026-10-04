@@ -19,6 +19,8 @@ start:
     width: 200
     icon: linux
     label: null
+    label_icon: linux
+    app_icon_size: 16
 
     
   - type: workspaces
