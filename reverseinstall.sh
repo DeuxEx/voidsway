@@ -5,10 +5,10 @@ xbps-install void-repo-multilib void-repo-multilib-nonfree void-repo-nonfree
 xbps-install grimshot wofi xdg-desktop-portal-gtk xdg-user-dirs-gtk xf86-video-intel xorg-fonts xorg-minimal zenity
 
 #reguirements
-xbps-install foot sway swayrbar wayland-utils swaylock swayidle ironbar wlogout
+xbps-install foot sway swayrbar wayland-utils swaylock swayidle ironbar wlogout wlroots
 
 #fonts
-xbps-install font-awesome6 nerd-fonts-ttf nerd-fonts-otf nerd-fonts
+xbps-install font-awesome6 nerd-fonts-ttf nerd-fonts-otf nerd-fonts xorg-fonts
 
 
 
