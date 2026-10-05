@@ -5,8 +5,8 @@ height: 30
 margin:
   top: 0
   bottom: 0
-  left: 1
-  right: 1
+  left: 0
+  right: 0
 
 
 start:
@@ -16,11 +16,10 @@ start:
     icon: applications-development
     label:  󱓞
     app_icon_size: 16
-
     
-  - type: workspaces
-    all_monitors: true
-    sort: index
+  #- type: workspaces
+  #  all_monitors: true
+  #  sort: index
 
 
 center:
