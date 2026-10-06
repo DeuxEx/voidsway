@@ -6,6 +6,7 @@ xbps-install grimshot wofi xdg-desktop-portal-gtk xdg-user-dirs-gtk xf86-video-i
 
 #reguirements
 xbps-install foot sway swayrbar wayland-utils swaylock swayidle ironbar wlogout wlroots
+xbps-install brightnessctl
 
 #fonts
 xbps-install font-awesome6 nerd-fonts-ttf nerd-fonts-otf nerd-fonts xorg-fonts

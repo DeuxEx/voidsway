@@ -1,5 +1,5 @@
 
-popup_autohide: true  # <--- LÄGG TILL DENNA RAD så försvinner menyn om du klickar bredvid
+popup_autohide: true
 position: bottom
 height: 30
 margin:
@@ -57,9 +57,9 @@ end:
     format: "{percentage}%"
     smooth_scroll_speed: 0.5
     mode:
-      type: systemd
+      type: sysfs
       subsystem: backlight
-      name: amdgpu_bl1
+      name: intel_backlight
     profiles:
       low:
         when: 25
@@ -136,5 +136,6 @@ end:
   - type: clock
     format: "%d/%m/%Y %H:%M"
 	#format_popup: "%H:%M:%S"
+
 
 
