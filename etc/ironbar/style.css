@@ -163,40 +163,35 @@ radio {
 }
 
 
-/* Själva popup-rutan för startmenyn */
 .popup-menu {
-    background-color: #1e1e2e; /* Din bakgrundsfärg (t.ex. Catppuccin Mocha) */
-    border: 2px solid #89b4fa; /* Ram runt menyn */
-    border-radius: 12px;       /* Rundade hörn */
-    padding: 10px;
+    min-width: 320px;
+    min-height: 400px;
+    padding: 15px;
+    background-color: #1e1e2e;
 }
 
-/* Applikationsraderna / knapparna inuti startmenyn */
-.popup-menu button {
-    background: transparent;
+
+.popup-menu entry {
+    background-color: #313244;
     color: #cdd6f4;
-    padding: 8px 12px;
+    border: 1px solid #45475a;
     border-radius: 6px;
-    margin: 2px 0;
+    padding: 6px;
+    margin-bottom: 10px;
 }
 
 
-/* Texten för apparna */
-.popup-menu label {
-    font-family: "JetBrainsMono Nerd Font", sans-serif;
-    font-size: 14px;
+.popup-menu list {
+    background: transparent;
 }
 
-
+.popup-menu row {
+    padding: 2px 0;
+}
 
 .popup-menu row:hover {
     background-color: #313244;
     border-radius: 6px;
-}
-
-.notifications .count {
-    font-size: 0.8em;
-   padding: 0.18em;
 }
 
 
