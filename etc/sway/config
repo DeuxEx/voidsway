@@ -165,7 +165,8 @@ bindsym $mod+Shift+e exec printf "Logga ut\nStarta om\nStäng av" | wofi --dmenu
     bindsym $mod+e layout toggle split
 
     # Make the current focus fullscreen
-    bindsym $mod+f fullscreen
+    #bindsym $mod+f fullscreen
+    bindsym $mod+f fullscreen toggle global
 
     # Toggle the current focus between tiling and floating mode
     bindsym $mod+Shift+space floating toggle

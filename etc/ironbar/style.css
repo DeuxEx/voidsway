@@ -158,51 +158,45 @@ radio {
 
 .menu label {
     padding: 0 var(--margin-sm);
-	background: #AA2233;
+	#background: #AA2233;
 	min-width:16px;
 }
 
-.popup-menu .sub-menu {
-    border-left: 1px solid var(--color-border-light);
-    padding-left: var(--margin-sm);
+
+/* Själva popup-rutan för startmenyn */
+.popup-menu {
+    background-color: #1e1e2e; /* Din bakgrundsfärg (t.ex. Catppuccin Mocha) */
+    border: 2px solid #89b4fa; /* Ram runt menyn */
+    border-radius: 12px;       /* Rundade hörn */
+    padding: 10px;
 }
 
-.popup-menu .category, .popup-menu .application {
-    padding: var(--margin-xs);
-}
-
-.popup-menu .category.open {
-    background-color: var(--color-dark-secondary);
-}
-
-
-.popup-music .album-art {
-    margin-right: var(--margin-lg);
-    border-radius: 5px;
-}
-
-.popup-music .icon-box {
-    margin-right: var(--margin-sm);
-}
-
-.popup-music .title .icon, .popup-music .title .label {
-    font-size: var(--size-lg);
-}
-
-.popup-music .artist .label, .popup-music .album .label {
-    margin-left: 6px;
-}
-
-.popup-music .volume .icon {
-    /* fix icon offset */
-    margin-right: 3px;
+/* Applikationsraderna / knapparna inuti startmenyn */
+.popup-menu button {
+    background: transparent;
+    color: #cdd6f4;
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin: 2px 0;
 }
 
 
+/* Texten för apparna */
+.popup-menu label {
+    font-family: "JetBrainsMono Nerd Font", sans-serif;
+    font-size: 14px;
+}
+
+
+
+.popup-menu row:hover {
+    background-color: #313244;
+    border-radius: 6px;
+}
 
 .notifications .count {
     font-size: 0.8em;
-    padding: 0.18em;
+   padding: 0.18em;
 }
 
 

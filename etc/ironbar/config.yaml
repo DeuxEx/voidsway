@@ -1,6 +1,7 @@
 
 popup_autohide: true
 position: bottom
+layer: overlay
 height: 30
 margin:
   top: 0
@@ -57,7 +58,7 @@ end:
     format: "{percentage}%"
     smooth_scroll_speed: 0.5
     mode:
-      type: sysfs
+      type: keyboard
       subsystem: backlight
       name: intel_backlight
     profiles:
