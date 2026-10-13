@@ -95,6 +95,9 @@ input type:touchpad {
     # Reload the configuration file
     bindsym $mod+Shift+c reload
 
+	# Assign swaylock to ctrl+alt+del
+	bindsym Ctrl+Mod1+Delete exec swaylock -f -C /etc/sway/swaylock.conf
+
 
 bindsym $mod+Shift+e exec printf "Logga ut\nStarta om\nStäng av" | wofi --dmenu --prompt "Power Menu" | xargs -I {} sh -c 'case "{}" in "Logga ut") swaymsg exit ;; "Starta om") loginctl reboot ;; "Stäng av") loginctl poweroff ;; esac'
 
