@@ -3,8 +3,8 @@
 # Read `man 5 sway` for a complete reference.
 
 # Hide the default Sway window text title bars
-default_border pixel 2
-default_floating_border pixel 2
+#default_border pixel 2
+#default_floating_border pixel 2
 
 
 
@@ -20,6 +20,7 @@ set $right l
 # Your preferred terminal emulator
 #set $term foot
 set $term konsole
+
 
 # Your preferred application launcher
 #set $menu wmenu-run
@@ -266,9 +267,9 @@ bar {
         statusline #ffffff
         background #323232
 
-	focused_workspace	#4c7899 #4c7899 #ffffff
-	inactive_workspace	#282a36 #282a36 #888888
-	urgent_workspace	#2f343a #900000 #ffffff
+		focused_workspace	#4c7899 #4c7899 #ffffff
+		inactive_workspace	#282a36 #282a36 #888888
+		urgent_workspace	#2f343a #900000 #ffffff
 	}
 }
 
@@ -276,7 +277,7 @@ bar {
 
 #for_window [class=".*"] fullscreen enable
 #for_window [app_id=".*"] fullscreen enable
-#for_window [app_id="vivaldi-stable"] fullscreen enable, inhibit_fullscreen desktop
+for_window [app_id="vivaldi-stable"] fullscreen enable, inhibit_fullscreen desktop
 
 # Make the nmtui pop-up window float in the center
 for_window [title="Wi-Fi Menu"] floating enable, resize set 800 500, move position center
@@ -284,3 +285,5 @@ for_window [title="Wi-Fi Menu"] floating enable, resize set 800 500, move positi
 
 
 exec_always killall -9 -q ironbar; sleep 0.2 && exec ironbar --config /etc/ironbar/config.yaml
+
+
