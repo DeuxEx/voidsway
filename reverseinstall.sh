@@ -21,14 +21,15 @@ mkdir -p /etc/{sway,waybar,ironbar}
 mkdir -p /usr/share/backgrounds/sway
 
 
-cp etc/sway/config /etc/sway/config
-cp etc/xdg/foot/foot.ini /etc/xdg/foot/foot.ini
-cp etc/xdg/waybar/* /etc/xdg/waybar/
-cp etc/xdg/wofi/* /etc/xdg/wofi/
-cp etc/sway/status.sh /etc/sway/status.sh
-cp bg-pictures/* /usr/share/backgrounds/sway/
-cp etc/sddm.conf /etc/sddm.conf
-cp etc/sway/sddm-config /etc/sway/
-cp etc/waybar/* /etc/waybar/
-cp etc/sway/swaylock.conf /etc/sway/swaylock.conf
-cp etc/ironbar/* /etc/ironbar/
+cp etc/sway/config 			/etc/sway/config
+cp etc/xdg/foot/foot.ini 	/etc/xdg/foot/foot.ini
+cp etc/xdg/waybar/* 		/etc/xdg/waybar/
+cp etc/xdg/wofi/* 			/etc/xdg/wofi/
+cp etc/sway/status.sh 		/etc/sway/status.sh
+cp bg-pictures/*	 		/usr/share/backgrounds/sway/
+cp etc/sddm.conf 			/etc/sddm.conf
+cp etc/sway/sddm-config 	/etc/sway/
+cp etc/waybar/*		 		/etc/waybar/
+cp etc/sway/swaylock.conf 	/etc/sway/swaylock.conf
+cp etc/ironbar/* 			/etc/ironbar/
+cp etc/runit/*				/etc/runit/
