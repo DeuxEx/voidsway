@@ -10,8 +10,8 @@
 
     "clock": {
 	"timezone": "Europe/Stockholm",
-	"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-	"format-alt": "{:%Y-%m-%d}",
+	//"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+	//"format-alt": "{:%Y-%m-%d}",
     "format": "{:%Y-%m-%d %H:%M}"
     },
 
@@ -58,18 +58,13 @@
         "on-scroll-up": "",
         "on-scroll-down": ""
     },
- 
- 
- 
+
     "custom/mypipe": {
         "format": "{}",
         "exec": "mkdir -p /tmp/waybar && [ ! -p /tmp/waybar/pipe ] && mkfifo /tmp/waybar/pipe; cat /tmp/waybar/pipe",
         "restart-interval": 1
     },
-    "custom/snip":{
-        "format": "",
-        "on-click": "grimshot --notify save area $HOME/Pictures/$(zenity --entry --text 'Set filename:' --entry-text '.png')"
-    },
+
 
     "custom/screenshot": {
         "format": "📷",
@@ -78,6 +73,10 @@
         "menu-file": "/etc/waybar/screenshot_menu.xml", // Sökväg till din menyfil
         "menu-actions": {
         "shot_area": "grimshot --notify savecopy area $HOME/Pictures/$(zenity --entry --text 'Set filename:' --entry-text '.png')",     // Välj region/område manuellt
+
+		//"shot_area": "grimshot --notify savecopy area $HOME/Pictures/$(date +%Y_%m_%d_%k%M_%N '.png')",     // Välj region/område manuellt
+
+
         "shot_screen": "grimshot --notify savecopy screen $HOME/Pictures/$(zenity --entry --text 'Set filename:' --entry-text '.png')", // Hela skärmen
         "shot_window": "grimshot --notify savecopy window $HOME/Pictures/$(zenity --entry --text 'Set filename:' --entry-text '.png')"  // Ett specifikt fönster
        }
