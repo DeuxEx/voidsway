@@ -6,7 +6,8 @@
     // HÄR: "custom/mypipe" har lagts till först i listan till höger
     "modules-left": ["sway/workspaces", "sway/mode", "wlr/taskbar", "sway/window"],
     "modules-center": ["custom/mypipe"],
-    "modules-right": ["custom/screenshot", "bluetooth", "network", "cpu", "memory", "tray", "clock"],
+    "modules-right": ["custom/screenshot", "battery", "bluetooth", "network", "cpu", "memory", "tray", "clock"],
+
 
     "clock": {
 	"timezone": "Europe/Stockholm",
@@ -14,6 +15,13 @@
 	//"format-alt": "{:%Y-%m-%d}",
     "format": "{:%Y-%m-%d %H:%M}"
     },
+
+
+    "battery": {
+         "format": "{capacity}% {icon}",
+         "format-icons": ["<", " ", " ", " ", " "]
+    },
+
 
     "cpu": {
         "format": "{usage}% ",
@@ -44,15 +52,33 @@
     },
 
     "network": {
-        "format-wifi": "Wifi: {essid}",
-        "format-ethernet": "ETH: {ipaddr}",
-        "format-disconnected": "Inget nätverk"
+        "format-wifi": "Wifi: {essid} {icon}",
+        "format-ethernet": "ETH: {ipaddr} {icon}",
+        "format-disconnected": "Inget nätverk {icon}",
+		"format-icons": ["󰖩 ", "󰈀 ", "󰯡 "]
     },
+
+
+   "network2": {
+        "interface": "wlp2s0",
+        "format": "{ifname}",
+        "format-wifi": "{essid} ({signalStrength}%) <U+F1EB>",
+        "format-ethernet": "{ifname} <U+F0C1>",
+        "format-disconnected": "", //An empty format will hide the module.
+        "format-disconnected": "<U+F072>",
+        "tooltip-format": "{ifname}",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%) <U+F1EB>",
+        "tooltip-format-ethernet": "{ifname} <U+F0C1>",
+        "tooltip-format-disconnected": "Disconnected",
+        "max-length": 50
+   },
+
+
 
      "backlight": {
         // "device": "acpi_video1",
         "format": "{icon}",
-        "format-icons": ["", ""],
+        "format-icons": [" ", " "],
         "on-click": "bash $HOME/.config/system_scripts/brightness up",
         "on-click-right": "bash $HOME/.config/system_scripts/brightness down",
         "on-scroll-up": "",
@@ -67,15 +93,14 @@
 
 
     "custom/screenshot": {
-        "format": "📷",
+        "format": "󰄀 ",
         "tooltip": true,
         "menu": "on-click",
         "menu-file": "/etc/waybar/screenshot_menu.xml", // Sökväg till din menyfil
         "menu-actions": {
-        "shot_area": "grimshot --notify savecopy area $HOME/Pictures/$(zenity --entry --text 'Set filename:' --entry-text '.png')",     // Välj region/område manuellt
+        //"shot_area": "grimshot --notify savecopy area $HOME/Pictures/$(zenity --entry --text 'Set filename:' --entry-text '.png')",     // Välj region/område manuellt
 
-		//"shot_area": "grimshot --notify savecopy area $HOME/Pictures/$(date +%Y_%m_%d_%k%M_%N '.png')",     // Välj region/område manuellt
-
+		"shot_area": "grimshot savecopy area $HOME/Pictures/$(date +%Y_%m_%d_%k%M_%N).png",
 
         "shot_screen": "grimshot --notify savecopy screen $HOME/Pictures/$(zenity --entry --text 'Set filename:' --entry-text '.png')", // Hela skärmen
         "shot_window": "grimshot --notify savecopy window $HOME/Pictures/$(zenity --entry --text 'Set filename:' --entry-text '.png')"  // Ett specifikt fönster
@@ -90,19 +115,21 @@
     },
 
 
-           "bluetooth": {
-                "format": "<U+F294> {status}",
-                "format-connected": "<U+F294> {device_alias}",
-                "format-connected-battery": "<U+F294> {device_alias} {device_battery_percentage}%",
-                // "format-device-preference": [ "device1", "device2" ], // preference list deciding the displayed device
-                "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
-                "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
-                "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-                "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
-           }
+   "bluetooth": {
+        "format": " {status}",
+        "format-connected": "󰂱 {device_alias}",
+        "format-connected-battery": "<U+F294> {device_alias} {device_battery_percentage}%",
+        // "format-device-preference": [ "device1", "device2" ], // preference list deciding the displayed device
+        "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
+   }
 
 
 
 
 }
+
+
 
