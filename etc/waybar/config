@@ -6,7 +6,7 @@
     // HÄR: "custom/mypipe" har lagts till först i listan till höger
     "modules-left": ["sway/workspaces", "sway/mode", "wlr/taskbar", "sway/window"],
     "modules-center": ["custom/mypipe"],
-    "modules-right": ["custom/screenshot", "battery", "bluetooth", "network", "cpu", "memory", "tray", "clock"],
+    "modules-right": ["custom/screenshot", "battery", "bluetooth", "network", "cpu", "memory", "clock", "tray"],
 
 
     "clock": {
@@ -98,12 +98,9 @@
         "menu": "on-click",
         "menu-file": "/etc/waybar/screenshot_menu.xml", // Sökväg till din menyfil
         "menu-actions": {
-        //"shot_area": "grimshot --notify savecopy area $HOME/Pictures/$(zenity --entry --text 'Set filename:' --entry-text '.png')",     // Välj region/område manuellt
-
-		"shot_area": "grimshot savecopy area $HOME/Pictures/$(date +%Y_%m_%d_%k%M_%N).png",
-
-        "shot_screen": "grimshot --notify savecopy screen $HOME/Pictures/$(zenity --entry --text 'Set filename:' --entry-text '.png')", // Hela skärmen
-        "shot_window": "grimshot --notify savecopy window $HOME/Pictures/$(zenity --entry --text 'Set filename:' --entry-text '.png')"  // Ett specifikt fönster
+			"shot_area": "grimshot savecopy area $HOME/Pictures/$(date +%Y_%m_%d_%k%M_%N).png",
+		    "shot_screen": "grimshot savecopy screen $HOME/Pictures/$(date +%Y_%m_%d_%k%M_%N).png",
+		    "shot_window": "grimshot savecopy window $HOME/Pictures/$(date +%Y_%m_%d_%k%M_%N).png"
        }
    },
 
