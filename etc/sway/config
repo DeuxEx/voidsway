@@ -99,7 +99,6 @@ input type:touchpad {
 	bindsym Ctrl+Mod1+Delete exec swaylock -f -C /etc/sway/swaylock.conf
 
 
-bindsym $mod+Shift+e exec printf "Logga ut\nStarta om\nStäng av" | wofi --dmenu --prompt "Power Menu" | xargs -I {} sh -c 'case "{}" in "Logga ut") swaymsg exit ;; "Starta om") loginctl reboot ;; "Stäng av") loginctl poweroff ;; esac'
 
 
 # Moving around:
@@ -216,7 +215,9 @@ mode "resize" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
+
 bindsym $mod+r mode "resize"
+
 #
 # Utilities:
 #

@@ -60,7 +60,7 @@
 
 
    "network2": {
-        "interface": "wlp2s0",
+        //"interface": "wlp2s0",
         "format": "{ifname}",
         "format-wifi": "{essid} ({signalStrength}%) <U+F1EB>",
         "format-ethernet": "{ifname} <U+F0C1>",
