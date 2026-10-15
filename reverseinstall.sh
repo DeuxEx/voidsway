@@ -6,7 +6,7 @@ xbps-install grimshot wofi xdg-desktop-portal-gtk xdg-user-dirs-gtk xf86-video-i
 
 #reguirements
 xbps-install sway swayrbar wayland-utils swaylock swayidle wlogout wlroots
-xbps-install brightnessctl
+xbps-install brightnessctl wmenu
 #xbps-install foot ironbar zenity
 
 xbps-install kde-baseapps

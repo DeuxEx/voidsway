@@ -23,8 +23,8 @@ set $term konsole
 
 
 # Your preferred application launcher
-#set $menu wmenu-run
-set $menu wofi --show drun
+set $menu wmenu-run
+#set $menu wofi --show drun
 
 
 ### Output configuration
