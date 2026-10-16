@@ -5,7 +5,7 @@
 
     "modules-left": ["sway/workspaces", "sway/mode", "wlr/taskbar", "sway/window"],
     "modules-center": ["custom/mypipe"],
-    "modules-right": ["custom/screenshot", "battery", "bluetooth", "network", "cpu", "memory", "clock", "tray"],
+    "modules-right": ["custom/imggallery", "custom/screenshot", "battery", "bluetooth", "network", "cpu", "memory", "clock", "tray"],
 
 
     "clock": {
@@ -83,8 +83,15 @@
     "custom/mypipe": {
         "format": "{}",
         "exec": "mkdir -p /tmp/waybar && [ ! -p /tmp/waybar/pipe ] && mkfifo /tmp/waybar/pipe; cat /tmp/waybar/pipe",
-        "restart-interval": 1
+        "restart-interval": 5
     },
+
+
+	"custom/imggallery": {
+		"format": " ",
+		"tooltip": true,
+		"on-click": "swayimg --gallery /home/void/Pictures",
+	},
 
 
     "custom/screenshot": {
