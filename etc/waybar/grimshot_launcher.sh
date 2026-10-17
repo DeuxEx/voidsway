@@ -18,6 +18,7 @@ function_one() {
 	touch $tmpfile
 	mkdir -p $createdir
 	grimshot savecopy area $tmpfile
+	sleep 0.5
 	cp $tmpfile $createdir/$createfile
 	rm -rf $tmpfile
 	#grimshot savecopy area $HOME/Pictures/$createdir/$(date +%Y_%m_%d_%k%M_%N).png
@@ -28,7 +29,13 @@ function_two() {
     #"shot_screen":
     createdir=$HOME/Pictures/$(date +%Y-%m-%d)
 	createfile=$(date +%Y_%m_%d_%k%M_%N).png
+	touch $tmpfile
     mkdir -p $createdir
+    grimshot savecopy screen $tmpfile
+	sleep 0.5
+	cp $tmpfile $createdir/$createfile
+	rm -rf $tmpfile
+
     #grimshot savecopy screen $HOME/Pictures/$createdir/$(date +%Y_%m_%d_%k%M_%N).png
 }
 
@@ -37,7 +44,12 @@ function_three() {
     #"shot_window":
     createdir=$HOME/Pictures/$(date +%Y-%m-%d)
 	createfile=$(date +%Y_%m_%d_%k%M_%N).png
+    touch $tmpfile
     mkdir -p $createdir
+    grimshot savecopy window $tmpfile
+	sleep 0.5
+	cp $tmpfile $createdir/$createfile
+	rm -rf $tmpfile
     #grimshot savecopy window $HOME/Pictures/$createdit/$(date +%Y_%m_%d_%k%M_%N).png
 }
 

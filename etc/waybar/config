@@ -69,7 +69,6 @@
     },
 
 
-0;61;17M0;61;17m
      "backlight": {
         // "device": "acpi_video1",
         "format": "{icon}",
@@ -97,13 +96,14 @@
 
     "custom/screenshot": {
         "format": "󰄀 ",
+		"icon-size": 30,
         "tooltip": true,
         "menu": "on-click",
         "menu-file": "/etc/waybar/screenshot_menu.xml", // Sökväg till din menyfil
         "menu-actions": {
-			"shot_area": "createdir=$HOME/Pictures/$(date +%Y-%m-%d);mkdir -p $createdir;grimshot savecopy area $HOME/Pictures/$createdir/$(date +%Y_%m_%d_%k%M_%N).png",
-			"shot_screen": "createdir=$HOME/Pictures/$(date +%Y-%m-%d);mkdir -p $createdir;grimshot savecopy screen $HOME/Pictures/$createdir/$(date +%Y_%m_%d_%k%M_%N).png",
-			"shot_window": "createdir=$HOME/Pictures/$(date +%Y-%m-%d);mkdir -p $createdir;grimshot savecopy window $HOME/Pictures/$createdit/$(date +%Y_%m_%d_%k%M_%N).png"
+			"shot_area": "bash /etc/waybar/grimshot_launcher.sh one",
+			"shot_screen": "bash /etc/waybar/grimshot_launcher.sh two",
+			"shot_window": "bash /etc/waybar/grimshot_launcher.sh three"
        }
    },
 
