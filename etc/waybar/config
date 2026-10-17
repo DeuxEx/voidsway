@@ -50,6 +50,7 @@
 
 
     "tray": {
+    "format": "󱊕 ",
 	"icon-size": 20,
 	"spacing": 10
     },
@@ -68,7 +69,7 @@
     },
 
 
-
+0;61;17M0;61;17m
      "backlight": {
         // "device": "acpi_video1",
         "format": "{icon}",
@@ -100,9 +101,9 @@
         "menu": "on-click",
         "menu-file": "/etc/waybar/screenshot_menu.xml", // Sökväg till din menyfil
         "menu-actions": {
-			"shot_area": "grimshot savecopy area $HOME/Pictures/$(date +%Y_%m_%d_%k%M_%N).png",
-			"shot_screen": "grimshot savecopy screen $HOME/Pictures/$(date +%Y_%m_%d_%k%M_%N).png",
-			"shot_window": "grimshot savecopy window $HOME/Pictures/$(date +%Y_%m_%d_%k%M_%N).png"
+			"shot_area": "createdir=$HOME/Pictures/$(date +%Y-%m-%d);mkdir -p $createdir;grimshot savecopy area $HOME/Pictures/$createdir/$(date +%Y_%m_%d_%k%M_%N).png",
+			"shot_screen": "createdir=$HOME/Pictures/$(date +%Y-%m-%d);mkdir -p $createdir;grimshot savecopy screen $HOME/Pictures/$createdir/$(date +%Y_%m_%d_%k%M_%N).png",
+			"shot_window": "createdir=$HOME/Pictures/$(date +%Y-%m-%d);mkdir -p $createdir;grimshot savecopy window $HOME/Pictures/$createdit/$(date +%Y_%m_%d_%k%M_%N).png"
        }
    },
 
