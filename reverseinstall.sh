@@ -16,7 +16,7 @@ xbps-install font-awesome6 nerd-fonts-ttf nerd-fonts-otf nerd-fonts xorg-fonts
 
 
 
-mkdir -p /etc/xdg/{wofi,waybar,foot}
+mkdir -p /etc/xdg/{wofi,waybar,foot,swayimg}
 mkdir -p /etc/{sway,waybar,ironbar}
 mkdir -p /usr/share/backgrounds/sway
 
@@ -33,3 +33,4 @@ cp etc/waybar/*		 		/etc/waybar/
 cp etc/sway/swaylock.conf 	/etc/sway/swaylock.conf
 cp etc/ironbar/* 			/etc/ironbar/
 cp etc/runit/*				/etc/runit/
+cp etc/xdg/swayimg/*		/etc/xdg/swayimg/
