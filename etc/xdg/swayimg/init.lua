@@ -154,10 +154,10 @@ swayimg.viewer.on_key("Shift+m", function()
 end)
 
 -- zoom in/out
-swayimg.viewer.on_key("plus", function()
+swayimg.viewer.on_key("pageup", function()
   swayimg.viewer.scale = swayimg.viewer.scale + swayimg.viewer.scale / 10
 end)
-swayimg.viewer.on_key("minus", function()
+swayimg.viewer.on_key("pagedown", function()
   swayimg.viewer.scale = swayimg.viewer.scale - swayimg.viewer.scale / 10
 end)
 
@@ -317,10 +317,10 @@ swayimg.gallery.on_key("a", function()
 end)
 
 -- thumbnail zoom in/out
-swayimg.gallery.on_key("equal", function()
+swayimg.gallery.on_key("pgup", function()
   swayimg.gallery.thumb_size = swayimg.gallery.thumb_size + 10
 end)
-swayimg.gallery.on_key("minus", function()
+swayimg.gallery.on_key("pgdown", function()
   swayimg.gallery.thumb_size = swayimg.gallery.thumb_size - 10
 end)
 
@@ -338,16 +338,16 @@ swayimg.gallery.on_key("down", function()
   swayimg.gallery.select("down")
 end)
 swayimg.gallery.on_key("left", function()
-  swayimg.gallery.select("left")
+  swayimg.gallery.select("")
 end)
 swayimg.gallery.on_key("right", function()
-  swayimg.gallery.select("right")
+  swayimg.gallery.select("")
 end)
 swayimg.gallery.on_key("next", function()
-  swayimg.gallery.select("pgdown")
+  swayimg.gallery.select("right")
 end)
 swayimg.gallery.on_key("prior", function()
-  swayimg.gallery.select("pgup")
+  swayimg.gallery.select("left")
 end)
 
 -- select another thumbnail (mouse/touchpad)
