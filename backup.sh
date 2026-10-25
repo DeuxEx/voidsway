@@ -1,4 +1,5 @@
 
+echo "Backing up data from system to github"
 
 cp /etc/sway/*						etc/sway/
 #cp /etc/xdg/foot/foot.ini			etc/xdg/foot/foot.ini

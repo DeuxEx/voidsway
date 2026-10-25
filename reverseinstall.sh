@@ -22,7 +22,7 @@ mkdir -p /etc/xdg/swayimg
 mkdir -p /etc/sway
 mkdir -p /etc/waybar
 mkdir -p /usr/share/backgrounds/sway
-
+mkdir -p $HOME/Pictures
 
 cp etc/sway/config 			/etc/sway/config
 cp etc/xdg/waybar/* 		/etc/xdg/waybar/

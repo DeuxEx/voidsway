@@ -7,6 +7,8 @@
 #./myscript.sh three
 
 
+mkdir $HOME/Pictures
+
 
 # Define your three different functions
 function_one() {
