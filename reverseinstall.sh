@@ -33,6 +33,5 @@ cp etc/sddm.conf 			/etc/sddm.conf
 cp etc/sway/sddm-config 	/etc/sway/
 cp etc/waybar/*		 		/etc/waybar/
 cp etc/sway/swaylock.conf 	/etc/sway/swaylock.conf
-#cp etc/ironbar/* 			/etc/ironbar/
 cp etc/runit/*				/etc/runit/
 cp etc/xdg/swayimg/*		/etc/xdg/swayimg/
