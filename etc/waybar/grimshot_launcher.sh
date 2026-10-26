@@ -7,7 +7,7 @@
 #./myscript.sh three
 
 
-mkdir $HOME/Pictures
+#mkdir $HOME/Pictures
 
 
 # Define your three different functions
