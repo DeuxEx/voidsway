@@ -60,12 +60,13 @@
 		"format": "{ifname}",
 		"tooltip-format": "{ifname}",
 		"tooltip-format-wifi": "{essid} ({signalStrength}%) {icon}",
-        "tooltip-format-ethernet": "{ifname} {icon}",
-        "tooltip-format-disconnected": "Disconnected {icon}",
-        "format-wifi": "{essid} ({signalStrength}%) {icon}",
-        "format-ethernet": "{ifname} {ipaddr} {icon}",
-        "format-disconnected": "Inget nätverk {icon}",
-		"format-icons": ["󰖩 ", "󰈀 ", "󰯡 "]
+	        "tooltip-format-ethernet": "{ifname} {icon}",
+    	   	"tooltip-format-disconnected": "Disconnected {icon}",
+   	    	"format-wifi": "{essid} ({signalStrength}%) {icon}",
+     		"format-ethernet": "{ifname} {ipaddr} {icon}",
+      		"format-disconnected": "Inget nätverk {icon}",
+		"format-icons": ["󰯡 ", "󰈀 ", "󰖩 "]
+
     },
 
 

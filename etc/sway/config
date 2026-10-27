@@ -302,4 +302,4 @@ for_window [title="Wi-Fi Menu"] floating enable, resize set 800 500, move positi
 
 #exec_always killall waybar; waybar -c /etc/waybar/config -s /etc/waybar/style.css
 
-exec_always killall waybar; sleep 0.2 && exec waybar -c /etc/waybar/config -s /etc/waybar/style.css
+exec_always killall waybar; sleep 1 && exec waybar -c /etc/waybar/config -s /etc/waybar/style.css
