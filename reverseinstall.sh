@@ -5,10 +5,12 @@ xbps-install void-repo-multilib void-repo-multilib-nonfree void-repo-nonfree
 xbps-install grimshot wofi xdg-desktop-portal-gtk xdg-user-dirs-gtk xf86-video-intel xorg-fonts xorg-minimal
 
 #reguirements
-xbps-install sway swayrbar wayland-utils swaylock swayidle wlogout wlroots
-xbps-install brightnessctl wmenu
-#xbps-install foot ironbar zenity
+xbps-install swayfx swayrbar wayland-utils swaylock swayidle wlogout wlroots wmenu
 
+#sway defaults
+xbps-install wayland-protocols pcre2 scdoc
+
+#for terminal
 xbps-install kde-baseapps
 
 #fonts
