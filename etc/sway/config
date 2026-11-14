@@ -48,13 +48,17 @@ output * bg /usr/share/backgrounds/sway/Gemini_Generated_Image_6vsro96vsro96vsr.
 # resumed. It will also lock your screen before your computer goes to sleep.
 
 
-exec swayidle -w \
-          timeout 300 'swaylock -f -C /etc/sway/swaylock.conf' \
-          timeout 330 'swaymsg "output * dpms off"' \
-          resume 'swaymsg "output * dpms on"' \
-          before-sleep 'swaylock -f -C /etc/sway/swaylock.conf'
 
-exec sway-audio-idle-inhibit
+
+# Hantera skärmlås och strömspar (DPMS)
+exec swayidle -w \
+    timeout 300 'swaylock -f -C /etc/sway/swaylock.conf' \
+    timeout 330 'swaymsg "output * power off"' \
+    resume 'swaymsg "output * power on"' \
+    before-sleep 'swaylock -f -C /etc/sway/swaylock.conf'
+
+# Förhindra viloläge/låsning när ljud eller video spelas upp
+exec wayland-pipewire-idle-inhibit
 
 
 

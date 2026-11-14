@@ -4,8 +4,8 @@ xbps-install void-repo-multilib void-repo-multilib-nonfree void-repo-nonfree
 #my requirements
 xbps-install grimshot wofi xdg-desktop-portal-gtk xdg-user-dirs-gtk xf86-video-intel xorg-minimal
 
-#reguirements
-xbps-install swayfx Waybar swayrbar wayland-utils swaylock swayidle wlogout wlroots wmenu
+#reguirements sway
+xbps-install swayfx Waybar swayrbar wayland-utils swaylock swayidle wlogout wlroots wmenu wayland-pipewire-idle-inhibit
 
 #sway defaults
 xbps-install wayland-protocols pcre2 scdoc
