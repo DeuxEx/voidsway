@@ -2,10 +2,10 @@
 xbps-install void-repo-multilib void-repo-multilib-nonfree void-repo-nonfree
 
 #my requirements
-xbps-install grimshot wofi xdg-desktop-portal-gtk xdg-user-dirs-gtk xf86-video-intel xorg-fonts xorg-minimal
+xbps-install grimshot wofi xdg-desktop-portal-gtk xdg-user-dirs-gtk xf86-video-intel xorg-minimal
 
 #reguirements
-xbps-install swayfx swayrbar wayland-utils swaylock swayidle wlogout wlroots wmenu
+xbps-install swayfx Waybar swayrbar wayland-utils swaylock swayidle wlogout wlroots wmenu
 
 #sway defaults
 xbps-install wayland-protocols pcre2 scdoc
@@ -14,7 +14,7 @@ xbps-install wayland-protocols pcre2 scdoc
 xbps-install kde-baseapps
 
 #fonts
-xbps-install font-awesome6 nerd-fonts-ttf nerd-fonts-otf nerd-fonts xorg-fonts
+xbps-install font-awesome6 nerd-fonts-ttf nerd-fonts-otf nerd-fonts xorg-fonts xorg-fonts
 
 
 mkdir -p /etc/xdg
