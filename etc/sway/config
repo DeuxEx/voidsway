@@ -1,5 +1,8 @@
-# Default config for sway
-#
+# starta firefox i wayland mode
+exec swaymsg setenv MOZ_ENABLE_WAYLAND 1
+
+
+
 # Read `man 5 sway` for a complete reference.
 
 # Hide the default Sway window text title bars
