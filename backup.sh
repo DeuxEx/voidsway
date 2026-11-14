@@ -8,4 +8,5 @@ cp /etc/xdg/wofi/*			etc/xdg/wofi/
 cp /usr/share/backgrounds/sway/*	bg-pictures/
 cp /etc/waybar/* 			etc/waybar/
 cp /etc/runit/ctrlaltdel		etc/runit/
+cp /etc/sddm.conf				etc/sddm.conf
 
