@@ -306,3 +306,4 @@ bar {
 
 
 exec_always "killall waybar; sleep 1 && exec waybar -c /etc/waybar/config -s /etc/waybar/style.css"
+for_window [app_id="firefox"] inhibit_idle open
