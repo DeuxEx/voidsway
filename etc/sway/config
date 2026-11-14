@@ -47,18 +47,32 @@ output * bg /usr/share/backgrounds/sway/Gemini_Generated_Image_6vsro96vsro96vsr.
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
 
+
 exec swayidle -w \
           timeout 300 'swaylock -f -C /etc/sway/swaylock.conf' \
           timeout 330 'swaymsg "output * dpms off"' \
-	  resume 'swaymsg "output * dpms on"' \
+          resume 'swaymsg "output * dpms on"' \
           before-sleep 'swaylock -f -C /etc/sway/swaylock.conf'
 
+exec sway-audio-idle-inhibit
 
-#exec swayidle -w \
-#     timeout 280 'notify-send -t 15000 -u critical "System Warning" "Computer locking in 20 seconds..."' \
-#     timeout 300 'swaylock -f -c 1a1a1a' \
-#     timeout 330 'swaymsg "output * dpms off"' \
-#     resume 'swaymsg "output * dpms on"'
+
+
+
+
+# --- SWAYFX SPECIFIKA INSTÄLLNINGAR ---
+corner_radius 10
+
+blur enable
+blur_passes 4
+blur_radius 4
+
+shadows enable
+shadow_blur_radius 10
+shadow_color #000000FF
+
+default_dim_inactive 0.2
+
 
 
 
@@ -263,12 +277,11 @@ bar {
 
     font pango:DejaVu Sans Mono, Font Awesome 7 Free 12
 
-    # Right way to handle clicks on the default swaybar:
-    # button1 is Left Click. button3 is Right Click.
     
 
     #click_events yes
     #bindsym button1 exec /etc/sway/status.sh click
+
 
 
     workspace_buttons yes
@@ -285,4 +298,4 @@ bar {
 }
 
 
-exec_always killall waybar; sleep 1 && exec waybar -c /etc/waybar/config -s /etc/waybar/style.css
+exec_always "killall waybar; sleep 1 && exec waybar -c /etc/waybar/config -s /etc/waybar/style.css"
