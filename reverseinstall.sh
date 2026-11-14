@@ -1,4 +1,3 @@
-#MIME_TYPES
 INSTALLMODULES=(
 	#the depos
 	"void-repo-multilib"
@@ -43,7 +42,6 @@ for module in "${INSTALLMODULES[@]}"; do
 	xbps-install "$module"
 done
 
-exit
 
 
 mkdir -p /etc/xdg
