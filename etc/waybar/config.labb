@@ -55,7 +55,6 @@ Det bästa sättet att göra detta på är att använda en FIFO-pipe.
 
 Steg 3: Pipa text från vad som helst
 Nu kan du skicka text till din Waybar från vilket skript eller terminalkommando som helst:
-bash
+
 echo "Hej från terminalen!" > /tmp/waybar_pipe
-Använd koden med försiktighet.
-Texten på panelen kommer då att ändras till det du skickade.
+

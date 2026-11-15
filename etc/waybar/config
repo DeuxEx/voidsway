@@ -60,25 +60,15 @@
 		"format": "{ifname}",
 		"tooltip-format": "{ifname}",
 		"tooltip-format-wifi": "{essid} ({signalStrength}%) {icon}",
-	        "tooltip-format-ethernet": "{ifname} {icon}",
-    	   	"tooltip-format-disconnected": "Disconnected {icon}",
-   	    	"format-wifi": "{essid} ({signalStrength}%) {icon}",
-     		"format-ethernet": "{ifname} {ipaddr} {icon}",
-      		"format-disconnected": "Inget nätverk {icon}",
+		"tooltip-format-ethernet": "{ifname} {icon}",
+		"tooltip-format-disconnected": "Disconnected {icon}",
+		"format-wifi": "{essid} ({signalStrength}%) {icon}",
+		"format-ethernet": "{ifname} {ipaddr} {icon}",
+		"format-disconnected": "Inget nätverk {icon}",
 		"format-icons": ["󰯡 ", "󰈀 ", "󰖩 "]
 
     },
 
-
-     "backlight": {
-        // "device": "acpi_video1",
-        "format": "{icon}",
-        "format-icons": [" ", " "],
-        "on-click": "bash $HOME/.config/system_scripts/brightness up",
-        "on-click-right": "bash $HOME/.config/system_scripts/brightness down",
-        "on-scroll-up": "",
-        "on-scroll-down": ""
-    },
 
 
     "custom/mypipe": {
