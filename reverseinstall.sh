@@ -1,57 +1,60 @@
 INSTALLMODULES=(
-	#the depos
-	"void-repo-multilib"
-	"void-repo-multilib-nonfree"
-	"void-repo-nonfree"
-	#my requirements
-	"grimshot"
-	"wofi"
+	"void-repo-multilib"			#depo
+	"void-repo-multilib-nonfree"	#depo
+	"void-repo-nonfree"				#depo
+	"grimshot"						#snapshots
+	"wofi"							#menu
 	"xdg-desktop-portal-gtk"
 	"xdg-user-dirs-gtk"
 	"xf86-video-intel"
 	"xorg-minimal"
-	#reguirements sway
-	"swayfx"
-	"Waybar"
-	"swayrbar"
-	"wayland-utils"
-	"swaylock"
-	"swayidle"
-	"wlogout"
-	"wlroots"
-	"wmenu"
+	"swayfx"						#way with beauty effects
+	"Waybar"						#waybar bar
+	"swayrbar"						#protocol for sway/swaybar
+	"wayland-utils"					#wayland utilities
+	"swaylock"						#screenlock
+	"swayidle"						#idle functions
+	"wlogout"						#wayland logout menu
+	"wlroots"						#wayland library
+	"wmenu"							#menu
 	"wayland-pipewire-idle-inhibit"
- 	#sway defaults
-	"wayland-protocols"
-	"pcre2"
-	"scdoc"
-	#for terminal
-	"kde-baseapps"
- 	#fonts
-	"font-awesome6"
-	"nerd-fonts-ttf" 
-	"nerd-fonts-otf"
-	"nerd-fonts" 
-	"xorg-fonts"
+	"wayland-protocols"				#wayland protocols
+	"pcre2"							#perl comp regex
+	"scdoc"							#tool for creatingman pages
+	"kde-baseapps"					#term konsole is in here
+	"font-awesome6"					#fonts
+	"nerd-fonts-ttf"				#fonts
+	"nerd-fonts-otf"				#fonts
+	"nerd-fonts"					#fonts
+	"xorg-fonts"					#fonts
 )
-
 
 
 for module in "${INSTALLMODULES[@]}"; do
 	echo "installing..." "$module"
-	xbps-install "$module"
+	xbps-install "$module" -y
 done
 
 
 
-mkdir -p /etc/xdg
-mkdir -p /etc/xdg/wofi
-mkdir -p /etc/xdg/waybar
-mkdir -p /etc/xdg/swayimg
-mkdir -p /etc/sway
-mkdir -p /etc/waybar
-mkdir -p /usr/share/backgrounds/sway
-mkdir -p $HOME/Pictures
+CREATEDIRS=(
+	"/etc/xdg"
+	"/etc/xdg/wofi"
+	"/etc/xdg/waybar"
+	"/etc/xdg/swayimg"
+	"/etc/sway"
+	"/etc/waybar"
+	"/usr/share/backgrounds/sway"
+	"$HOME/Pictures"
+	"$HOME/.config"
+)
+
+
+for dir in "${CREATEDIRS[@]}"; do
+	mkdir -p "$dir"
+done
+
+
 
 cp etc/sway/config 			/etc/sway/config
 cp etc/xdg/waybar/* 		/etc/xdg/waybar/
@@ -67,9 +70,6 @@ cp etc/xdg/swayimg/*		/etc/xdg/swayimg/
 cp etc/sddm.conf			/etc/sddm.conf
 
 
-
-# Skapa config-mappen för mime-appar om den inte finns
-mkdir -p "$HOME/.config"
 
 # Definiera alla vanliga bildtyper
 MIME_TYPES=(
