@@ -56,15 +56,12 @@ done
 
 
 
-cp etc/sway/config 			/etc/sway/config
+cp etc/sway/*	 			/etc/sway/
 cp etc/xdg/waybar/* 		/etc/xdg/waybar/
 cp etc/xdg/wofi/* 			/etc/xdg/wofi/
-cp etc/sway/status.sh 		/etc/sway/status.sh
 cp bg-pictures/*	 		/usr/share/backgrounds/sway/
 cp etc/sddm.conf 			/etc/sddm.conf
-cp etc/sway/sddm-config 	/etc/sway/
 cp etc/waybar/*		 		/etc/waybar/
-cp etc/sway/swaylock.conf 	/etc/sway/swaylock.conf
 cp etc/runit/*				/etc/runit/
 cp etc/xdg/swayimg/*		/etc/xdg/swayimg/
 cp etc/sddm.conf			/etc/sddm.conf
