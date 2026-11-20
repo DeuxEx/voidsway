@@ -1,6 +1,8 @@
 # starta firefox i wayland mode
 exec swaymsg setenv MOZ_ENABLE_WAYLAND 1
 
+#ge mig större scrollbars
+exec dbus-update-activation-environment GTK_OVERLAY_SCROLLING=0
 
 
 # Read `man 5 sway` for a complete reference.
@@ -91,17 +93,22 @@ default_dim_inactive 0.2
 
 ### Input configuration
 
-input type:touchpad {
-       dwt enabled
-       tap enabled
-       natural_scroll enabled
-       middle_emulation enabled
-   }
 
-   input type:keyboard {
+input type:touchpad {
+    dwt enabled
+    tap enabled
+    drag enabled
+    drag_lock disabled
+    natural_scroll enabled
+    middle_emulation enabled
+}
+
+
+
+input type:keyboard {
        xkb_layout "se"
        xkb_numlock enabled
-   }
+}
 
 
 # You can also configure each device individually.
