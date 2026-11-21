@@ -98,7 +98,7 @@
     "custom/imggallery": {
         "format": " ",
         "tooltip": true,
-        "tooltip-format": "Öppna bildgalleri (gThumb)",
+        "tooltip-format": "Öppna bildgalleri",
         "on-click": "gthumb /home/void/Pictures"
     },
 
@@ -123,6 +123,7 @@
         "format": "󰄀 ",
 		"icon-size": 30,
         "tooltip": true,
+        "tooltip-format": "Ta skärmdump",
         "menu": "on-click",
         "menu-file": "/etc/waybar/screenshot_menu.xml", // Sökväg till din menyfil
         "menu-actions": {
