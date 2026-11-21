@@ -5,7 +5,7 @@
 
     "modules-left": ["sway/workspaces", "sway/mode", "wlr/taskbar", "sway/window"],
     "modules-center": ["custom/mypipe"],
-    "modules-right": ["custom/imggallery", "custom/screenshot", "wireplumber", "battery", "bluetooth", "network", "cpu", "memory", "clock", "tray"],
+    "modules-right": ["custom/imggallery", "custom/screenshot", "custom/volume", "battery", "bluetooth", "network", "cpu", "memory", "clock", "tray"],
 
 
     "clock": {
@@ -110,6 +110,19 @@
 		"format-icons": ["", "", " "],
 		"on-click": "pavucontrol"
 	},
+
+
+    "custom/volume": {
+        "format": "{}%",
+        "exec": "wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{vol=int($2*100); if ($3==\"[MUTED]\") print \"   \" vol; else if (vol==0) print \" \" vol; else if (vol<50) print \" \" vol; else print \"  \" vol}'",
+        "interval": 1,
+        "on-scroll-up": "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%+",
+        "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-",
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "on-click-right": "pavucontrol",
+        "tooltip": false
+    },
+
 
 
     "custom/screenshot": {
