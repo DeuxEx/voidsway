@@ -4,6 +4,7 @@ INSTALLMODULES=(
 	"void-repo-nonfree"				#depo
 	"grimshot"						#snapshots
 	"wofi"							#menu
+	"gthumb"						#bildvisning
 	"xdg-desktop-portal-gtk"
 	"xdg-user-dirs-gtk"
 	"xf86-video-intel"
