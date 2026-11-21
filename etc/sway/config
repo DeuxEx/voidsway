@@ -1,8 +1,6 @@
 # starta firefox i wayland mode
 exec swaymsg setenv MOZ_ENABLE_WAYLAND 1
 
-#ge mig större scrollbars
-exec dbus-update-activation-environment GTK_OVERLAY_SCROLLING=0
 
 
 # Read `man 5 sway` for a complete reference.
@@ -23,6 +21,7 @@ set $up k
 set $right l
 
 # Your preferred terminal emulator
+#set $term foot
 set $term konsole
 
 
@@ -45,7 +44,7 @@ output * bg /usr/share/backgrounds/sway/Gemini_Generated_Image_6vsro96vsro96vsr.
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
 
-# include special configs that matches the hostname
+# Inkluderar automatiskt filen som matchar datorns hostname
 include "/etc/sway/$(cat /etc/hostname).conf"
 
 
@@ -58,15 +57,14 @@ include "/etc/sway/$(cat /etc/hostname).conf"
 
 
 
-# Manage screenlock and energysave (DPMS)
+# Hantera skärmlås och strömspar (DPMS)
 exec swayidle -w \
     timeout 300 'swaylock -f -C /etc/sway/swaylock.conf' \
     timeout 330 'swaymsg "output * power off"' \
     resume 'swaymsg "output * power on"' \
     before-sleep 'swaylock -f -C /etc/sway/swaylock.conf'
 
-
-# Prohibit screenlock when audio/video is playing
+# Förhindra viloläge/låsning när ljud eller video spelas upp
 exec wayland-pipewire-idle-inhibit
 
 
@@ -93,27 +91,21 @@ default_dim_inactive 0.2
 
 ### Input configuration
 
-
 input type:touchpad {
-    dwt enabled
-    tap enabled
-    drag enabled
-    drag_lock disabled
-    natural_scroll enabled
-    middle_emulation enabled
-}
+       dwt enabled
+       tap enabled
+       natural_scroll enabled
+       middle_emulation enabled
+   }
 
-
-
-input type:keyboard {
+   input type:keyboard {
        xkb_layout "se"
        xkb_numlock enabled
-}
+   }
 
 
 # You can also configure each device individually.
 # Read `man 5 sway-input` for more information about this section.
-
 
 ### Key bindings
 #

@@ -1,0 +1,7 @@
+#!/bin/sh
+exec 2>&1
+loadkeys sv-latin1 2>/dev/null || true
+chvt 7 2>/dev/null || true
+TERM=linux setterm --msg off </dev/tty7 >/dev/tty7 2>/dev/null || true
+TERM=linux setterm --clear=all </dev/tty7 >/dev/tty7 2>/dev/null || true
+exec /usr/bin/lemurs </dev/tty7 >/dev/tty7 2>&1
