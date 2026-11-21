@@ -1,3 +1,4 @@
+
 /* Nollställ marginaler och ställ in grundfont */
 * {
     border: none;
@@ -7,12 +8,16 @@
     min-height: 0;
 }
 
+
+
 /* Hela baren längst ned */
 window#waybar {
-    background-color: #1e1e2e;
-    color: #cdd6f4;
+    background-color: #211e2e;
+    color: #cdd6f1;
     border-top: 1px solid #313244;
 }
+
+
 
 /* Generell stil för alla moduler i baren */
 #workspaces,
@@ -24,8 +29,11 @@ window#waybar {
 #mode,
 #battery,
 #bluetooth,
-#screenshot,
+#custom-screenshot,
+#custom-imggallery,
 #mypipe,
+#custom-volume,
+
 
 
 window {
