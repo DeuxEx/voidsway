@@ -5,7 +5,7 @@
 
     "modules-left": ["sway/workspaces", "sway/mode", "wlr/taskbar", "sway/window"],
     "modules-center": ["custom/mypipe"],
-    "modules-right": ["custom/imggallery", "custom/screenshot", "battery", "bluetooth", "network", "cpu", "memory", "clock", "tray"],
+    "modules-right": ["custom/imggallery", "custom/screenshot", "wireplumber", "battery", "bluetooth", "network", "cpu", "memory", "clock", "tray"],
 
 
     "clock": {
@@ -62,10 +62,6 @@
     },
 
 
-    "sway/language": {
-		"format": " {}",
-    },
-
 
     "tray": {
     "format": "󱊕 ",
@@ -90,10 +86,11 @@
 
 
 
+
     "custom/mypipe": {
         "format": "{}",
-        "exec": "mkdir -p /tmp/waybar && [ ! -p /tmp/waybar/pipe ] && mkfifo /tmp/waybar/pipe; cat /tmp/waybar/pipe",
-        "restart-interval": 1
+        "exec": "mkdir -p /tmp/waybar && [ ! -p /tmp/waybar/pipe ] && mkfifo /tmp/waybar/pipe; tail -n 1 -f /tmp/waybar/pipe",
+        "tail": true
     },
 
 
@@ -105,7 +102,15 @@
         "on-click": "gthumb /home/void/Pictures"
     },
 
-    
+
+
+	"wireplumber": {
+		"format": "{volume}% {icon}",
+		"format-muted": "   ",
+		"format-icons": ["", "", " "],
+		"on-click": "pavucontrol"
+	},
+
 
     "custom/screenshot": {
         "format": "󰄀 ",
