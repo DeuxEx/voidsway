@@ -24,6 +24,7 @@ function_one() {
 	cp $tmpfile $createdir/$createfile
 	rm -rf $tmpfile
 	#grimshot savecopy area $HOME/Pictures/$createdir/$(date +%Y_%m_%d_%k%M_%N).png
+	echo "Screen screenshot taken." > /tmp/waybar/pipe
 }
 
 function_two() {
