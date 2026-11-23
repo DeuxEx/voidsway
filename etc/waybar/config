@@ -3,7 +3,7 @@
     "position": "bottom",
     "height": 30,
 
-    "modules-left": ["sway/workspaces", "sway/mode", "wlr/taskbar", "sway/window"],
+    "modules-left": ["sway/workspaces", "wlr/taskbar", "sway/window"],
     "modules-center": ["custom/mypipe"],
     "modules-right": ["custom/imggallery", "custom/screenshot", "custom/volume", "battery", "bluetooth", "network", "cpu", "memory", "clock", "tray"],
 
@@ -144,7 +144,8 @@
 	"format": "{icon}",
 	"icon-size": 24,
 	"on-click": "activate",
-	"tooltip-format": "{title}"
+	"tooltip-format": "{title}",
+	"max-length": 40
     },
 
 

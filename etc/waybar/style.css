@@ -25,7 +25,6 @@ window#waybar {
 #bluetooth,
 #custom-screenshot,
 #custom-imggallery,
-
 #custom-mypipe,
 
 #custom-volume,
@@ -39,7 +38,7 @@ window#waybar {
 
 #custom-mypipe {
 	color: #112233;
-	background-color: #334422;
+	background-color: #ffffff;
 }
 
 
