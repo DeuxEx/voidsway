@@ -88,7 +88,7 @@
 
 
     "custom/mypipe": {
-        "format": "{}",
+        "format": "PIPE: {}",
         "exec": "mkdir -p /tmp/waybar && [ ! -p /tmp/waybar/pipe ] && mkfifo /tmp/waybar/pipe; while true; do cat /tmp/waybar/pipe; done",
         "tail": true
     },

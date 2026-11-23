@@ -25,7 +25,9 @@ window#waybar {
 #bluetooth,
 #custom-screenshot,
 #custom-imggallery,
+
 #custom-mypipe,
+
 #custom-volume,
 #window {
     padding: 2px 10px;
@@ -34,6 +36,12 @@ window#waybar {
     background-color: #3355bb;
     color: #cdd6f4;
 }
+
+#custom-mypipe {
+	color: #112233;
+	background-color: #334422;
+}
+
 
 /* Volymmodul när ljudet är avstängt (Muted) */
 #custom-volume.muted {
