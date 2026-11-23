@@ -13,7 +13,6 @@
 # Define your three different functions
 function_one() {
     echo "Running the first function! 🚀"
-	#"shot_area":
 	createdir=$HOME/Pictures/$(date +%Y-%m-%d)
 	createfile=$(date +%Y_%m_%d_%k%M_%N).png
 	tmpfile=$HOME/Pictures/$(date +%Y_%m_%d_%k%M_%N).png
@@ -25,6 +24,7 @@ function_one() {
 	rm -rf $tmpfile
 	#grimshot savecopy area $HOME/Pictures/$createdir/$(date +%Y_%m_%d_%k%M_%N).png
 	echo "Screen screenshot taken." > /tmp/waybar/pipe
+	(sleep 3 && echo "" > /tmp/waybar/pipe) >/dev/null 2>&1 &
 }
 
 function_two() {

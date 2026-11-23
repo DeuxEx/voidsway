@@ -8,6 +8,11 @@
     "modules-right": ["custom/imggallery", "custom/screenshot", "custom/volume", "battery", "bluetooth", "network", "cpu", "memory", "clock", "tray"],
 
 
+    "sway/window": {
+        "max-length": 40
+    },
+
+
     "clock": {
         "timezone": "Europe/Stockholm",
         "format": "{:%Y-%m-%d %H:%M}",
@@ -90,7 +95,8 @@
     "custom/mypipe": {
         "format": "PIPE: {}",
         "exec": "mkdir -p /tmp/waybar && [ ! -p /tmp/waybar/pipe ] && mkfifo /tmp/waybar/pipe; while true; do cat /tmp/waybar/pipe; done",
-        "tail": true
+        "tail": true,
+        "min-length": 40
     },
 
 
