@@ -28,6 +28,8 @@ INSTALLMODULES=(
 	"nerd-fonts-otf"				#fonts
 	"nerd-fonts"					#fonts
 	"xorg-fonts"					#fonts
+	"mako"							#notifieringar
+	"libnotify"						#notifieringar
 )
 
 

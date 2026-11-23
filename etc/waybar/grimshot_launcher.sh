@@ -19,12 +19,11 @@ function_one() {
 	tmpfile=$HOME/Pictures/$(date +%Y_%m_%d_%k%M_%N).png
 	touch $tmpfile
 	mkdir -p $createdir
-	grimshot savecopy area $tmpfile
+	grimshot --notify savecopy area $tmpfile
 	sleep 0.5
 	cp $tmpfile $createdir/$createfile
 	rm -rf $tmpfile
 	#grimshot savecopy area $HOME/Pictures/$createdir/$(date +%Y_%m_%d_%k%M_%N).png
-	#echo "Area screenshot taken." > /tmp/waybar/pipe<br>
 }
 
 function_two() {

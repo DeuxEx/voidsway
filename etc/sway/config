@@ -1,6 +1,8 @@
 # starta firefox i wayland mode
 exec swaymsg setenv MOZ_ENABLE_WAYLAND 1
 
+#möjligör notifieringar 
+exec mako
 
 
 # Read `man 5 sway` for a complete reference.
