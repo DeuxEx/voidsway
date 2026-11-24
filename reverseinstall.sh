@@ -30,6 +30,7 @@ INSTALLMODULES=(
 	"xorg-fonts"					#fonts
 	"mako"							#notifieringar
 	"libnotify"						#notifieringar
+	"gtklock"						#lockscreen
 )
 
 
@@ -45,6 +46,7 @@ CREATEDIRS=(
 	"/etc/xdg/wofi"
 	"/etc/xdg/waybar"
 	"/etc/xdg/swayimg"
+	"/etc/xdg/gtklock"
 	"/etc/sway"
 	"/etc/waybar"
 	"/usr/share/backgrounds/sway"
@@ -64,7 +66,7 @@ cp --debug	etc/xdg/waybar/* 		/etc/xdg/waybar/
 cp --debug	etc/xdg/wofi/* 			/etc/xdg/wofi/
 cp --debug	bg-pictures/*	 		/usr/share/backgrounds/sway/
 cp --debug	etc/sddm.conf 			/etc/sddm.conf
-cp --debug	etc/waybar/*		 		/etc/waybar/
+cp --debug	etc/waybar/*		 	/etc/waybar/
 cp --debug	etc/runit/*				/etc/runit/
 cp --debug	etc/xdg/swayimg/*		/etc/xdg/swayimg/
 cp --debug	etc/sddm.conf			/etc/sddm.conf
