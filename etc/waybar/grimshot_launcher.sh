@@ -12,25 +12,24 @@
 
 # Define your three different functions
 function_one() {
-    echo "Running the first function! 🚀"
 	createdir=$HOME/Pictures/$(date +%Y-%m-%d)
-	createfile=$(date +%Y_%m_%d_%k%M_%N).png
+	createfile=$(date +%Y_%m_%d_%H%M_%N).png
 	tmpfile=$HOME/Pictures/$(date +%Y_%m_%d_%k%M_%N).png
 	touch $tmpfile
 	mkdir -p $createdir
-	grimshot --notify savecopy area $tmpfile
+	grimshot savecopy area $tmpfile
 	sleep 0.5
 	cp $tmpfile $createdir/$createfile
 	rm -rf $tmpfile
 	echo "Area screenshot taken." > /tmp/waybar/pipe
-	(sleep 3 && echo "" > /tmp/waybar/pipe) >/dev/null 2>&1 &
+	(sleep 1 && echo "" > /tmp/waybar/pipe) >/dev/null 2>&1 &
 }
 
+
+
 function_two() {
-    echo "Running the second function! 🛠️"
-    #"shot_screen":
     createdir=$HOME/Pictures/$(date +%Y-%m-%d)
-	createfile=$(date +%Y_%m_%d_%k%M_%N).png
+	createfile=$(date +%Y_%m_%d_%H%M_%N).png
 	touch $tmpfile
     mkdir -p $createdir
     grimshot savecopy screen $tmpfile
@@ -38,15 +37,14 @@ function_two() {
 	cp $tmpfile $createdir/$createfile
 	rm -rf $tmpfile
 	echo "Screen screenshot taken." > /tmp/waybar/pipe
-	(sleep 3 && echo "" > /tmp/waybar/pipe) >/dev/null 2>&1 &
-
+	(sleep 1 && echo "" > /tmp/waybar/pipe) >/dev/null 2>&1 &
 }
 
+
+
 function_three() {
-    echo "Running the third function! 📊"
-    #"shot_window":
     createdir=$HOME/Pictures/$(date +%Y-%m-%d)
-	createfile=$(date +%Y_%m_%d_%k%M_%N).png
+	createfile=$(date +%Y_%m_%d_%H%M_%N).png
     touch $tmpfile
     mkdir -p $createdir
     grimshot savecopy window $tmpfile
@@ -54,8 +52,7 @@ function_three() {
 	cp $tmpfile $createdir/$createfile
 	rm -rf $tmpfile
 	echo "Window screenshot taken." > /tmp/waybar/pipe
-	(sleep 3 && echo "" > /tmp/waybar/pipe) >/dev/null 2>&1 &
-
+	(sleep 1 && echo "" > /tmp/waybar/pipe) >/dev/null 2>&1 &
 }
 
 
