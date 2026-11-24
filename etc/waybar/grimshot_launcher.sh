@@ -22,6 +22,7 @@ function_one() {
 	cp $tmpfile $createdir/$createfile
 	rm -rf $tmpfile
 	echo "Area screenshot taken." > /tmp/waybar/pipe
+    sleep 1
 	(sleep 1 && echo "" > /tmp/waybar/pipe) >/dev/null 2>&1 &
 }
 
@@ -37,6 +38,7 @@ function_two() {
 	cp $tmpfile $createdir/$createfile
 	rm -rf $tmpfile
 	echo "Screen screenshot taken." > /tmp/waybar/pipe
+	sleep 1
 	(sleep 1 && echo "" > /tmp/waybar/pipe) >/dev/null 2>&1 &
 }
 
@@ -52,6 +54,7 @@ function_three() {
 	cp $tmpfile $createdir/$createfile
 	rm -rf $tmpfile
 	echo "Window screenshot taken." > /tmp/waybar/pipe
+	sleep 1
 	(sleep 1 && echo "" > /tmp/waybar/pipe) >/dev/null 2>&1 &
 }
 
