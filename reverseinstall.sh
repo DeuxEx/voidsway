@@ -70,6 +70,7 @@ cp --debug	etc/waybar/*		 	/etc/waybar/
 cp --debug	etc/runit/*				/etc/runit/
 cp --debug	etc/xdg/swayimg/*		/etc/xdg/swayimg/
 cp --debug	etc/sddm.conf			/etc/sddm.conf
+cp --debug  etc/xdg/gtklock/*		/etc/sdg/gtklock/
 
 
 

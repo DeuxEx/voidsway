@@ -1,0 +1,49 @@
+/* Bakgrund på hela skärmen (syns om ingen bakgrundsbild används) */
+window {
+    background-color: #181825;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Den stora digitala 24-timmarsklockan */
+#clock-label {
+    font-family: "JetBrains Mono", "DejaVu Sans Mono", monospace;
+    font-size: 72px;
+    font-weight: bold;
+    color: #cdd6f4;
+    text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.7);
+    margin-bottom: 10px;
+}
+
+/* Texten "Password:" ovanför/bredvid rutan */
+#input-label {
+    font-size: 0px; /* Döljer ordet "Password:" för en renare look */
+}
+
+/* Lösenordsrutan */
+#input-field {
+    background-color: rgba(30, 30, 46, 0.85);
+    color: #cdd6f4;
+    border: 2px solid #89b4fa;
+    border-radius: 10px;
+    padding: 10px 16px;
+    font-size: 16px;
+    min-width: 260px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Felmeddelande vid fel lösenord */
+#error-label {
+    color: #f38ba8;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+/* Dölj upplåsningsknappen (man trycker bara Enter) */
+#unlock-button {
+    opacity: 0;
+    min-height: 0px;
+    min-width: 0px;
+    padding: 0px;
+    margin: 0px;
+}

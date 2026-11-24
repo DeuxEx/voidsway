@@ -9,4 +9,4 @@ cp --debug /usr/share/backgrounds/sway/*	bg-pictures/
 cp --debug /etc/waybar/* 					etc/waybar/
 cp --debug /etc/runit/ctrlaltdel			etc/runit/
 cp --debug /etc/sddm.conf					etc/sddm.conf
-
+cp --debug /etc/xdg/gtklock/*				etc/xdg/gtklock/
