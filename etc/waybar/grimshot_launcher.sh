@@ -10,6 +10,7 @@
 #mkdir $HOME/Pictures
 
 
+
 # Define your three different functions
 function_one() {
 	createdir=$HOME/Pictures/$(date +%Y-%m-%d)
