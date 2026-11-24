@@ -22,8 +22,7 @@ function_one() {
 	sleep 0.5
 	cp $tmpfile $createdir/$createfile
 	rm -rf $tmpfile
-	#grimshot savecopy area $HOME/Pictures/$createdir/$(date +%Y_%m_%d_%k%M_%N).png
-	echo "Screen screenshot taken." > /tmp/waybar/pipe
+	echo "Area screenshot taken." > /tmp/waybar/pipe
 	(sleep 3 && echo "" > /tmp/waybar/pipe) >/dev/null 2>&1 &
 }
 
@@ -38,8 +37,9 @@ function_two() {
 	sleep 0.5
 	cp $tmpfile $createdir/$createfile
 	rm -rf $tmpfile
-    #grimshot savecopy screen $HOME/Pictures/$createdir/$(date +%Y_%m_%d_%k%M_%N).png
-	#echo "Screen screenshot taken." > /tmp/waybar/pipe<br>
+	echo "Screen screenshot taken." > /tmp/waybar/pipe
+	(sleep 3 && echo "" > /tmp/waybar/pipe) >/dev/null 2>&1 &
+
 }
 
 function_three() {
@@ -53,8 +53,9 @@ function_three() {
 	sleep 0.5
 	cp $tmpfile $createdir/$createfile
 	rm -rf $tmpfile
-    #grimshot savecopy window $HOME/Pictures/$createdit/$(date +%Y_%m_%d_%k%M_%N).png
-	#echo "Windows screenshot taken." > /tmp/waybar/pipe<br>
+	echo "Window screenshot taken." > /tmp/waybar/pipe
+	(sleep 3 && echo "" > /tmp/waybar/pipe) >/dev/null 2>&1 &
+
 }
 
 
