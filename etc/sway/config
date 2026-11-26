@@ -23,7 +23,7 @@ set $up k
 set $right l
 
 # Your preferreds
-set $term alacritty
+set $term kitty
 set $menu wmenu-run -p ">>" -N 1e1e2e -n cdd6f4 -M 89b4fa -m 1e1e2e -S 89b4fa -s 1e1e2e
 
 

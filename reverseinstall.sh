@@ -22,9 +22,7 @@ INSTALLMODULES=(
 	"wayland-protocols"				#wayland protocols
 	"pcre2"							#perl comp regex
 	"scdoc"							#tool for creating man pages
-	#"kde-baseapps"					#term konsole is in here
 	"kitty"							#terminals
-	"alacritty"						#terminals
 	"font-awesome6"					#fonts
 	"nerd-fonts-ttf"				#fonts
 	"nerd-fonts-otf"				#fonts
@@ -47,6 +45,7 @@ CREATEDIRS=(
 	"/etc/xdg/waybar"
 	"/etc/xdg/swayimg"
 	"/etc/xdg/gtklock"
+	"/etc/xdg/kitty"
 	"/etc/sway"
 	"/etc/waybar"
 	"/usr/share/backgrounds/sway"
@@ -71,7 +70,7 @@ cp --debug	etc/runit/*				/etc/runit/
 cp --debug	etc/xdg/swayimg/*		/etc/xdg/swayimg/
 cp --debug	etc/sddm.conf			/etc/sddm.conf
 cp --debug  etc/xdg/gtklock/*		/etc/xdg/gtklock/
-
+cp --debug	etc/xdg/kitty/*			/etc/xdg/kitty/
 
 
 # Definiera alla vanliga bildtyper
