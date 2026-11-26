@@ -56,11 +56,18 @@ include "/etc/sway/$(cat /etc/hostname).conf"
 
 
 # Hantera skärmlås och strömspar (DPMS)
+#exec swayidle -w \
+#    timeout 300 'swaylock -f -C /etc/sway/swaylock.conf' \
+#    timeout 330 'swaymsg "output * power off"' \
+#    resume 'swaymsg "output * power on"' \
+#    before-sleep 'swaylock -f -C /etc/sway/swaylock.conf'
+
 exec swayidle -w \
-    timeout 300 'swaylock -f -C /etc/sway/swaylock.conf' \
+    timeout 300 'gtklock -d' \
     timeout 330 'swaymsg "output * power off"' \
     resume 'swaymsg "output * power on"' \
-    before-sleep 'swaylock -f -C /etc/sway/swaylock.conf'
+    before-sleep 'gtklock -d'
+
 
 # Förhindra viloläge/låsning när ljud eller video spelas upp
 exec wayland-pipewire-idle-inhibit

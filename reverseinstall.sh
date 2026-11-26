@@ -21,8 +21,10 @@ INSTALLMODULES=(
 	"wayland-pipewire-idle-inhibit"
 	"wayland-protocols"				#wayland protocols
 	"pcre2"							#perl comp regex
-	"scdoc"							#tool for creatingman pages
-	"kde-baseapps"					#term konsole is in here
+	"scdoc"							#tool for creating man pages
+	#"kde-baseapps"					#term konsole is in here
+	"kitty"							#terminals
+	"alacritty"						#terminals
 	"font-awesome6"					#fonts
 	"nerd-fonts-ttf"				#fonts
 	"nerd-fonts-otf"				#fonts
