@@ -141,8 +141,8 @@ input type:keyboard {
     bindsym $mod+Shift+c reload
 
 	# Assign swaylock to ctrl+alt+del
-	bindsym Ctrl+Mod1+Delete exec swaylock -f -C /etc/sway/swaylock.conf
-
+	#bindsym Ctrl+Mod1+Delete exec swaylock -f -C /etc/sway/swaylock.conf
+    bindsym Ctrl+Mod1+Delete exec gtklock -d --style /etc/xdg/gtklock/style.css --background /use/share/backgrounds/sway/Gemini_Generated_Image_6vsro96vsro96vsr-locked.jpeg
 
 
 
