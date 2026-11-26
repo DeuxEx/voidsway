@@ -36,7 +36,7 @@ window {
 #error-label {
     color: #f38ba8;
     font-weight: bold;
-    margin-top: 8px;
+    margin-top: 18px;
 }
 
 /* Dölj upplåsningsknappen (man trycker bara Enter) */

@@ -61,11 +61,13 @@ include "/etc/sway/$(cat /etc/hostname).conf"
 #    resume 'swaymsg "output * power on"' \
 #    before-sleep 'swaylock -f -C /etc/sway/swaylock.conf'
 
+
 exec swayidle -w \
-    timeout 300 'gtklock -d' \
+    timeout 300 'gtklock -d --style /etc/xdg/gtklock/style.css --background /usr/share/backgrounds/sway/Gemini_Generated_Image_6vsro96vsro96vsr-locked.jpeg' \
     timeout 330 'swaymsg "output * power off"' \
     resume 'swaymsg "output * power on"' \
-    before-sleep 'gtklock -d'
+    before-sleep 'pgrep gtklock || gtklock -d --style /etc/xdg/gtklock/style.css --background /usr/share/backgrounds/sway/Gemini_Generated_Image_6vsro96vsro96vsr-locked.jpeg'
+
 
 
 # Förhindra viloläge/låsning när ljud eller video spelas upp
