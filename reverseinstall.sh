@@ -1,34 +1,34 @@
 INSTALLMODULES=(
-	"void-repo-multilib"			#depo
-	"void-repo-multilib-nonfree"	#depo
-	"void-repo-nonfree"				#depo
-	"grimshot"						#snapshots
-	"wofi"							#menu
-	"gthumb"						#bildvisning
+	"void-repo-multilib"		    	#depo
+	"void-repo-multilib-nonfree"	    #depo
+	"void-repo-nonfree"	    			#depo
+	"grimshot"				    		#snapshots
+	"wofi"						    	#menu
+	"gthumb"						    #bildvisning
 	"xdg-desktop-portal-gtk"
 	"xdg-user-dirs-gtk"
 	"xf86-video-intel"
-	"xorg-minimal"
-	"swayfx"						#way with beauty effects
-	"Waybar"						#waybar bar
-	"swayrbar"						#protocol for sway/swaybar
-	"wayland-utils"					#wayland utilities
-	"swaylock"						#screenlock
-	"swayidle"						#idle functions
-	"wlogout"						#wayland logout menu
-	"wlroots"						#wayland library
-	"wmenu"							#menu
-	"wayland-pipewire-idle-inhibit"
-	"wayland-protocols"				#wayland protocols
-	"pcre2"							#perl comp regex
-	"scdoc"							#tool for creating man pages
-	"kitty"							#terminals
-	"font-awesome6"					#fonts
-	"nerd-fonts-ttf"				#fonts
-	"nerd-fonts-otf"				#fonts
-	"nerd-fonts"					#fonts
-	"xorg-fonts"					#fonts
-	"gtklock"						#lockscreen
+	"xorg-minimal"                      #pure mimimum xorg 
+	"swayfx"				    		#way with beauty effects
+	"Waybar"			    			#waybar bar
+	"swayrbar"						    #protocol for sway/swaybar
+	"wayland-utils"				    	#wayland utilities
+	"swaylock"				    		#screenlock
+	"swayidle"			    			#idle functions
+	"wlogout"		    				#wayland logout menu
+	"wlroots"	    					#wayland library
+	"wmenu"	    						#menu
+	"wayland-pipewire-idle-inhibit"     #inhibit
+	"wayland-protocols"	    			#wayland protocols
+	"pcre2"			    				#perl comp regex
+	"scdoc"		    					#tool for creating man pages
+	"kitty"	    						#terminal
+	"font-awesome6"					    #fonts
+	"nerd-fonts-ttf"			    	#fonts
+	"nerd-fonts-otf"		    		#fonts
+	"nerd-fonts"		    			#fonts
+	"xorg-fonts"	    				#fonts
+	"gtklock"	    					#wayland lockscreen
 )
 
 
